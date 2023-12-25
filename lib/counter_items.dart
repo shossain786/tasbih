@@ -172,11 +172,9 @@ class _CounterHomeState extends State<CounterHome> {
   }
 
   Future<void> _saveItems() async {
-    print('Save Items called-------------->');
     final prefs = await SharedPreferences.getInstance();
     final itemsList = items.map((item) => json.encode(item)).toList();
     prefs.setStringList('items', itemsList);
-    print(prefs.get('items').toString());
   }
 
   void _removeItem(int index) {

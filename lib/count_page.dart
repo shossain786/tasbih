@@ -52,6 +52,7 @@ class _CountPageState extends State<CountPage> {
                 ),
               ),
               Text('Target Count: $targetCount'),
+              const SizedBox(height: 10),
               Image.asset(
                 'assets/counter_pic.gif',
                 width: double.infinity,
@@ -76,6 +77,7 @@ class _CountPageState extends State<CountPage> {
   Future<void> _showContinuePrompt() async {
     showDialog(
       context: context,
+      barrierDismissible: false,
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('Target Reached'),
@@ -84,13 +86,18 @@ class _CountPageState extends State<CountPage> {
           actions: [
             TextButton(
               onPressed: () {
+                setState(() {
+                  count = 0;
+                });
+                _saveCount();
+                Navigator.pop(context);
                 Navigator.pop(context);
               },
               child: const Text('No'),
             ),
             TextButton(
               onPressed: () {
-                _resetCount(); // Reset the count and continue counting
+                Navigator.pop(context);
                 Navigator.pop(context);
               },
               child: const Text('Yes'),
@@ -99,11 +106,13 @@ class _CountPageState extends State<CountPage> {
         );
       },
     );
+    // Navigator.pop(context);
   }
 
   void _resetCount() {
     showDialog(
       context: context,
+      barrierDismissible: false,
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('Reset Count'),
