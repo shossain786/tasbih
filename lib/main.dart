@@ -11,6 +11,8 @@ class TasbihAPP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+          colorSchemeSeed: const Color(0xff6750a4), useMaterial3: true),
       home: const HomePage(),
       routes: {
         '/counter': (context) => const CounterHome(),
@@ -26,7 +28,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter App'),
+        title: const Text('Tasbih App'),
       ),
       drawer: Drawer(
         child: ListView(
@@ -56,13 +58,46 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: const Center(
-        child: Text(
-          'Counter Home Screen!',
-          style: TextStyle(
-            fontSize: 25,
-            color: Color.fromARGB(253, 2, 128, 2),
-          ),
+      body: Center(
+        child: Column(
+          children: [
+            Image.asset(
+              'assets/madina_pic.png',
+              width: double.infinity,
+            ),
+            const SizedBox(height: 20),
+            const Card(
+              child: ListTile(
+                title: Text(
+                  'Hadise Paak:  Jo mujh par durud padhna bhul gaya woh jannat ki rah bhul gaya!',
+                ),
+                subtitle: Text(
+                    'صلی اللہ علیہ والہ وسلم(Swallellaho alayhi wa aalihi sallam)'),
+              ),
+            ),
+            const SizedBox(height: 10),
+            const Card(
+              elevation: 20,
+              color: Color.fromARGB(255, 218, 244, 176),
+              shape: RoundedRectangleBorder(
+                  side: BorderSide(color: Colors.deepPurple)),
+              child: SizedBox(
+                width: 400,
+                height: 40,
+                child: Center(
+                  child: Text(
+                    'Shab e Juma ki durud sharif',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 22,
+                      color: Color.fromARGB(255, 72, 2, 17),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Image.asset('assets/juma_durud.png'),
+          ],
         ),
       ),
     );

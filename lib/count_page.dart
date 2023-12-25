@@ -52,7 +52,10 @@ class _CountPageState extends State<CountPage> {
                 ),
               ),
               Text('Target Count: $targetCount'),
-              Image.asset('assets/counter_pic.gif', width: 400, height: 500),
+              Image.asset(
+                'assets/counter_pic.gif',
+                width: double.infinity,
+              ),
             ],
           ),
         ),
