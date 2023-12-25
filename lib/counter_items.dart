@@ -180,6 +180,7 @@ class _CounterHomeState extends State<CounterHome> {
   void _removeItem(int index) {
     showDialog(
       context: context,
+      barrierDismissible: false,
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('Remove Item'),
