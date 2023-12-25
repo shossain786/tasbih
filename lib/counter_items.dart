@@ -28,12 +28,6 @@ class _CounterHomeState extends State<CounterHome> {
       ),
       body: Column(
         children: [
-          ElevatedButton(
-            onPressed: () {
-              _addItems();
-            },
-            child: const Text('Add Tasbih'),
-          ),
           Expanded(
             child: ListView.builder(
               itemCount: items.length,
@@ -56,6 +50,25 @@ class _CounterHomeState extends State<CounterHome> {
                   },
                 );
               },
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: ElevatedButton(
+              onPressed: () {
+                _addItems();
+              },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+                  (Set<MaterialState> states) {
+                    return const Color.fromARGB(255, 52, 255, 211);
+                  },
+                ),
+              ),
+              child: const Text(
+                'Add Tasbih',
+                style: TextStyle(fontSize: 20, color: Colors.pink),
+              ),
             ),
           ),
         ],
