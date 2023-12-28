@@ -58,19 +58,23 @@ class _CounterHomeState extends State<CounterHome> {
               onPressed: () {
                 _addItems();
               },
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.resolveWith<Color?>(
-                  (Set<MaterialState> states) {
-                    return const Color.fromARGB(255, 52, 255, 211);
-                  },
-                ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.purple,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
               ),
               child: const Text(
                 'Add Tasbih',
-                style: TextStyle(fontSize: 20, color: Colors.pink),
+                style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
+          const SizedBox(
+            height: 10,
+          )
         ],
       ),
     );

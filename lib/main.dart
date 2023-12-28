@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Image.asset(
@@ -72,15 +72,17 @@ class HomePage extends StatelessWidget {
                   'Hadise Paak:  Jo mujh par durud padhna bhul gaya woh jannat ki rah bhul gaya!',
                 ),
                 subtitle: Text(
-                    'صلی اللہ علیہ والہ وسلم(Swallellaho alayhi wa aalihi sallam)'),
+                    'صلی اللہ علیہ والہ وسلم(Swallellaho alayhi wa aalihi wa sallam)'),
               ),
             ),
             const SizedBox(height: 10),
             const Card(
               elevation: 20,
-              color: Color.fromARGB(255, 218, 244, 176),
+              color: Color.fromARGB(255, 104, 252, 64),
               shape: RoundedRectangleBorder(
-                  side: BorderSide(color: Colors.deepPurple)),
+                  side: BorderSide(color: Colors.deepPurple),
+                  borderRadius:
+                      BorderRadiusDirectional.all(Radius.circular(10))),
               child: SizedBox(
                 width: 400,
                 height: 40,

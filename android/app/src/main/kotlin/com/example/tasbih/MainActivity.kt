@@ -1,4 +1,4 @@
-package com.example.tasbih
+package com.saddy.tasbih
 
 import io.flutter.embedding.android.FlutterActivity
 
