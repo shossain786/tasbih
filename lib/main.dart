@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbih/about_us.dart';
 import 'package:tasbih/counter_items.dart';
 
 void main() {
@@ -11,11 +12,13 @@ class TasbihAPP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           colorSchemeSeed: const Color(0xff6750a4), useMaterial3: true),
       home: const HomePage(),
       routes: {
         '/counter': (context) => const CounterHome(),
+        '/aboutus': (context) => const AboutUsPage(),
       },
     );
   }
@@ -52,8 +55,11 @@ class HomePage extends StatelessWidget {
                 Navigator.pushNamed(context, '/counter');
               },
             ),
-            const ListTile(
-              title: Text('About US'),
+            ListTile(
+              title: const Text('About US'),
+              onTap: () {
+                Navigator.pushNamed(context, '/aboutus');
+              },
             ),
           ],
         ),
