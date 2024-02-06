@@ -5,39 +5,86 @@ import 'package:google_fonts/google_fonts.dart';
 
 class MyColors {
   Color bgColor() {
-    return const Color.fromARGB(255, 112, 94, 192);
+    return Colors.blue;
   }
 
   Color iconsColor() {
-    return const Color.fromARGB(255, 199, 244, 251);
+    return Colors.blue;
   }
 
   Color appBarIconsColor() {
-    return const Color.fromARGB(255, 219, 246, 239);
+    return const Color.fromARGB(255, 235, 14, 14);
+  }
+
+  Color btnTextColor() {
+    return Colors.blue;
   }
 }
 
-class StyledAppBarText extends StatelessWidget {
-  const StyledAppBarText(this.text, {super.key});
+AppBar myCustomAppBar(BuildContext context, String title, String title2) {
+  return AppBar(
+    title: Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+            color: Colors.blue,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        Text(
+          title2,
+          style: const TextStyle(
+            color: Colors.orange,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    ),
+    foregroundColor: MyColors().iconsColor(),
+  );
+}
 
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: GoogleFonts.unbounded(
+AppBar myAppBar(BuildContext context, String title) {
+  return AppBar(
+    title: Text(
+      title,
+      style: const TextStyle(
+        fontFamily: 'Inter-SemiBold',
+        fontWeight: FontWeight.bold,
         fontSize: 20,
-        color: const Color.fromARGB(255, 219, 246, 239),
       ),
-    );
-  }
+    ),
+    backgroundColor: MyColors().bgColor(),
+    foregroundColor: MyColors().appBarIconsColor(),
+    centerTitle: true,
+  );
 }
 
-TextStyle drawerTextStyle() {
-  return GoogleFonts.unbounded(
-    color: const Color.fromARGB(255, 199, 244, 251),
-    fontSize: 20,
-    fontWeight: FontWeight.normal,
+Text drawerTextStyle(String text) {
+  return Text(
+    text,
+    style: const TextStyle(
+      fontFamily: 'Poppins-SemiBold',
+      fontWeight: FontWeight.bold,
+      fontSize: 18,
+      color: Colors.red,
+    ),
+  );
+}
+
+Text btnTextStyle(String text) {
+  String title = text;
+  return Text(
+    title,
+    style: TextStyle(
+      fontFamily: 'Poppins-SemiBold',
+      fontWeight: FontWeight.bold,
+      fontSize: 18,
+      color: MyColors().btnTextColor(),
+    ),
   );
 }

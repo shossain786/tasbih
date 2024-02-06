@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:tasbih/utils/library_utils.dart';
+import 'package:tasbih/utils/library_utils.dart';
 
 class AboutUsPage extends StatelessWidget {
   const AboutUsPage({super.key});
@@ -7,30 +7,18 @@ class AboutUsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('About US'),
-        // centerTitle: true,
-        // backgroundColor: MyColors().bgColor(),
-        // foregroundColor: MyColors().appBarIconsColor(),
-      ),
+      appBar: myCustomAppBar(context, 'About', 'US'),
       body: const SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'About Us',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
             SizedBox(height: 16),
             Text(
               'Welcome to our Tasbih app!',
               style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
               ),
             ),
             SizedBox(height: 16),
@@ -38,7 +26,7 @@ class AboutUsPage extends StatelessWidget {
               'This application is to manage Tasbih that you recite daily based or occationally. With our app, you can organize your tasbih, acess any time you want. It will keep remembering your recited count even if you close the application and use later.',
               style: TextStyle(fontSize: 16),
             ),
-            SizedBox(height: 16),
+            SizedBox(height: 10),
             Text(
               'Key Features:',
               style: TextStyle(
@@ -46,7 +34,7 @@ class AboutUsPage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 4),
             ListTile(
               leading: Icon(Icons.check),
               title: Text('Add or remove Tasbih as you need.'),
@@ -65,7 +53,7 @@ class AboutUsPage extends StatelessWidget {
               'We are continuously working on improving and adding new features to enhance your reading experience. If you have any suggestions, issues, or feedback, feel free to reach out to us at:',
               style: TextStyle(fontSize: 16),
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 4),
             Row(
               children: [
                 Icon(Icons.email, color: Color.fromARGB(255, 3, 36, 94)),

@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tasbih/utils/library_utils.dart';
 
 class CountPage extends StatefulWidget {
   final String itemName;
@@ -26,7 +27,27 @@ class _CountPageState extends State<CountPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tasbih - ${widget.itemName}'),
+        title: Row(
+          children: [
+            const Text(
+              'Tasbih -',
+              style: TextStyle(
+                color: Colors.blue,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              widget.itemName,
+              style: const TextStyle(
+                color: Colors.orange,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+        foregroundColor: Colors.blue,
         actions: [
           IconButton(
             onPressed: _resetCount,

@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tasbih/count_page.dart';
+import 'package:tasbih/utils/library_utils.dart';
 
 class CounterHome extends StatefulWidget {
   const CounterHome({super.key});
@@ -23,9 +24,7 @@ class _CounterHomeState extends State<CounterHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Tasbih Items'),
-      ),
+      appBar: myCustomAppBar(context, 'Tasbih', 'Items'),
       body: Column(
         children: [
           Expanded(
@@ -58,18 +57,15 @@ class _CounterHomeState extends State<CounterHome> {
               onPressed: () {
                 _addItems();
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.purple,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-              ),
-              child: const Text(
-                'Add Tasbih',
-                style: TextStyle(
-                  fontSize: 25,
-                  color: Colors.white,
+              style: ButtonStyle(
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    side: const BorderSide(color: Colors.orange),
+                  ),
                 ),
               ),
+              child: const Text('Add Tasbih'),
             ),
           ),
           const SizedBox(
