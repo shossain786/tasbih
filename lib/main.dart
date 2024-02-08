@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasbih/about_us.dart';
+import 'package:tasbih/appdrawer.dart';
 import 'package:tasbih/counter_items.dart';
 import 'package:tasbih/utils/library_utils.dart';
 
@@ -32,98 +33,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: myCustomAppBar(context, 'Tasbih', 'APP'),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blueAccent,
-              ),
-              child: Text(
-                'Menu',
-                style: TextStyle(
-                  color: Colors.red,
-                  fontSize: 24,
-                ),
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                elevation: 4,
-                backgroundColor: const Color.fromARGB(254, 202, 216, 48),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-              ),
-              child: ListTile(
-                title: drawerTextStyle('Tasbih'),
-                onTap: () {
-                  Navigator.pushNamed(context, '/counter');
-                },
-                trailing: const Icon(Icons.arrow_right),
-                iconColor: Colors.blue,
-                dense: true,
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                elevation: 4,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-              ),
-              child: ListTile(
-                title: drawerTextStyle('Masnoon Duain'),
-                onTap: () {},
-                trailing: const Icon(Icons.arrow_right),
-                iconColor: Colors.blue,
-                dense: true,
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                elevation: 4,
-                backgroundColor: const Color.fromARGB(254, 202, 216, 48),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-              ),
-              child: ListTile(
-                title: drawerTextStyle('Fatiiha ki Tariqah'),
-                onTap: () {},
-                trailing: const Icon(Icons.arrow_right),
-                iconColor: const Color.fromARGB(255, 111, 15, 15),
-                dense: true,
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/aboutus');
-              },
-              style: ElevatedButton.styleFrom(
-                elevation: 4,
-                backgroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-              ),
-              child: ListTile(
-                title: drawerTextStyle('About US'),
-                onTap: () {
-                  Navigator.pushNamed(context, '/aboutus');
-                },
-                trailing: const Icon(Icons.arrow_right),
-                iconColor: Colors.blue,
-                dense: true,
-              ),
-            )
-          ],
-        ),
-      ),
+      drawer: const MyAppDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [

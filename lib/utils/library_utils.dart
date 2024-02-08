@@ -8,7 +8,7 @@ class MyColors {
   }
 
   Color iconsColor() {
-    return Colors.blue;
+    return Colors.orange;
   }
 
   Color appBarIconsColor() {
@@ -18,6 +18,37 @@ class MyColors {
   Color btnTextColor() {
     return Colors.blue;
   }
+
+  Color appDrawHeadColor() {
+    return Colors.white;
+  }
+}
+
+class StyledAppBarText extends StatelessWidget {
+  const StyledAppBarText(this.text, {super.key});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: const TextStyle(
+        fontFamily: "Inter-SemiBold",
+        fontWeight: FontWeight.bold,
+        fontSize: 24,
+        color: Color.fromARGB(255, 219, 246, 239),
+      ),
+    );
+  }
+}
+
+TextStyle drawerTextStyle1() {
+  return const TextStyle(
+    color: Color.fromARGB(255, 199, 244, 251),
+    fontSize: 20,
+    fontWeight: FontWeight.normal,
+  );
 }
 
 AppBar myCustomAppBar(BuildContext context, String title, String title2) {
@@ -66,11 +97,11 @@ AppBar myAppBar(BuildContext context, String title) {
 Text drawerTextStyle(String text) {
   return Text(
     text,
-    style: const TextStyle(
+    style: TextStyle(
       fontFamily: 'Poppins-SemiBold',
       fontWeight: FontWeight.bold,
       fontSize: 18,
-      color: Colors.red,
+      color: MyColors().iconsColor(),
     ),
   );
 }
