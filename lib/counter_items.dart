@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tasbih/count_page.dart';
 import 'package:tasbih/utils/library_utils.dart';
@@ -25,52 +26,71 @@ class _CounterHomeState extends State<CounterHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: myCustomAppBar(context, 'Tasbih', 'Items'),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          _addItems();
+        },
+        backgroundColor: Colors.orange,
+        splashColor: Colors.blue,
+        child: const Icon(
+          Icons.add,
+          color: Colors.red,
+        ),
+      ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Expanded(
             child: ListView.builder(
               itemCount: items.length,
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(
-                    items[index]?['text'],
-                  ),
-                  subtitle: Text(
-                    'Target Count: ${items[index]?['${items[index]?['text']}_targetCount']}',
-                  ),
-                  trailing: IconButton(
-                    onPressed: () {
-                      _removeItem(index);
-                    },
-                    icon: const Icon(Icons.delete),
-                  ),
-                  onTap: () {
-                    _navigateToCountPage(items[index]?['text']);
-                  },
+                return Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: (index % 2 == 1)
+                            ? Colors.orangeAccent
+                            : Colors.white,
+                        border: Border.all(width: 3, color: Colors.blue),
+                      ),
+                      child: ListTile(
+                        leading: Icon(
+                          FlutterIslamicIcons.solidTasbihHand,
+                          color: MyColors().barIconsColor(),
+                        ),
+                        title: Text(
+                          items[index]?['text'],
+                          style: const TextStyle(
+                            fontFamily: "Poppins-Bold",
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        subtitle: Text(
+                          'Target Count: ${items[index]?['${items[index]?['text']}_targetCount']}',
+                        ),
+                        trailing: IconButton(
+                          onPressed: () {
+                            _removeItem(index);
+                          },
+                          icon: Icon(
+                            Icons.delete,
+                            color: MyColors().deleteIconColor(),
+                          ),
+                        ),
+                        onTap: () {
+                          _navigateToCountPage(items[index]?['text']);
+                        },
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 2,
+                    )
+                  ],
                 );
               },
             ),
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: ElevatedButton(
-              onPressed: () {
-                _addItems();
-              },
-              style: ButtonStyle(
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                    side: const BorderSide(color: Colors.orange),
-                  ),
-                ),
-              ),
-              child: const Text('Add Tasbih'),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          )
         ],
       ),
     );
@@ -93,14 +113,21 @@ class _CounterHomeState extends State<CounterHome> {
         int targetCount = 0;
 
         return AlertDialog(
-          title: const Text('New Tasbih'),
+          backgroundColor: Colors.white,
+          title: const Text(
+            'New Tasbih',
+            style: TextStyle(
+              color: Colors.blue,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
           ),
+          scrollable: true,
           content: Column(
             children: [
               TextField(
-                // onChanged: (value) => newItem,
                 onChanged: (value) {
                   newItem = value;
                 },
@@ -111,18 +138,27 @@ class _CounterHomeState extends State<CounterHome> {
                   targetCount = int.tryParse(value) ?? 0;
                 },
                 keyboardType: TextInputType.number,
-                decoration: const InputDecoration(labelText: 'Target Count'),
+                decoration: const InputDecoration(
+                  labelText: 'Target Count',
+                  isDense: true,
+                ),
               ),
             ],
           ),
           actions: [
-            TextButton(
+            ElevatedButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: const Text('Cancel'),
+              child: const Text(
+                'Cancel',
+                style: TextStyle(
+                  color: Colors.orange,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
-            TextButton(
+            ElevatedButton(
               onPressed: () async {
                 if (newItem.isNotEmpty) {
                   setState(() {
@@ -135,7 +171,13 @@ class _CounterHomeState extends State<CounterHome> {
                   Navigator.pop(context);
                 }
               },
-              child: const Text('Save'),
+              child: const Text(
+                'Save',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ],
         );

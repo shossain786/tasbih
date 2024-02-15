@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": "p1",
+      "name": "Khana Khane ki Dua",
+      "subtitle":"dua1",
+      "details": "Bismillahir Rahmanir Rahim(بسم الله الرحمان الرحيم)",
+      "tarjumah": "Allah Ke Nam Se Suru jo bahot meherban rahmat wala"
+    },
+    {
+      "id": "p2",
+      "name": "Khana Khane ki Dua",
+      "subtitle":"dua1",
+      "details": "Bismillahir Rahmanir Rahim(بسم الله الرحمان الرحيم)",
+      "tarjumah": "Allah Ke Nam Se Suru jo bahot meherban rahmat wala"
+    },
+    {
+      "id": "p3",
+      "name": "Khana Khane ki Dua",
+      "subtitle":"dua1",
+      "details": "Bismillahir Rahmanir Rahim(بسم الله الرحمان الرحيم)",
+      "tarjumah": "Allah Ke Nam Se Suru jo bahot meherban rahmat wala"
+    }
+  ]
+}

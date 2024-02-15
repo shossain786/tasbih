@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tasbih/about_us.dart';
 import 'package:tasbih/appdrawer.dart';
 import 'package:tasbih/counter_items.dart';
+import 'package:tasbih/screens/dua.dart';
 import 'package:tasbih/utils/library_utils.dart';
 
 void main() {
@@ -15,11 +16,11 @@ class TasbihAPP extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          colorSchemeSeed: const Color(0xff6750a4), useMaterial3: true),
+      theme: ThemeData(colorSchemeSeed: Colors.orange, useMaterial3: true),
       home: const HomePage(),
       routes: {
         '/counter': (context) => const CounterHome(),
+        '/duain': (context) => const DuaScreen(),
         '/aboutus': (context) => const AboutUsPage(),
       },
     );

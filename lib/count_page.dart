@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+// import 'package:vibration/vibration.dart';
 
 class CountPage extends StatefulWidget {
   final String itemName;
@@ -89,6 +90,7 @@ class _CountPageState extends State<CountPage> {
       count++;
       _saveCount();
       if (count == targetCount) {
+        // Vibration.vibrate(duration: 100);
         _showContinuePrompt();
       }
     });

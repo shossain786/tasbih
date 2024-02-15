@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasbih/screens/profile_screen.dart';
 import 'package:tasbih/utils/library_utils.dart';
+import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 
 class MyAppDrawer extends StatefulWidget {
   const MyAppDrawer({super.key});
@@ -63,7 +64,7 @@ class _MyAppDrawerState extends State<MyAppDrawer> {
             tileColor: MyColors().bgColor(),
             title: drawerTextStyle('Tasbih'),
             leading: Icon(
-              Icons.countertops_rounded,
+              FlutterIslamicIcons.solidTasbihHand,
               color: MyColors().iconsColor(),
             ),
             trailing: Icon(
@@ -79,21 +80,23 @@ class _MyAppDrawerState extends State<MyAppDrawer> {
             tileColor: MyColors().bgColor(),
             title: drawerTextStyle('Masnoon Duain'),
             leading: Icon(
-              Icons.mosque,
+              FlutterIslamicIcons.locationMosque,
               color: MyColors().iconsColor(),
             ),
             trailing: Icon(
               Icons.chevron_right_rounded,
               color: MyColors().iconsColor(),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, '/duain');
+            },
           ),
           const Divider(color: Colors.white12, height: 1),
           ListTile(
             tileColor: MyColors().bgColor(),
             title: drawerTextStyle('Fatiiha ki Tariqah'),
             leading: Icon(
-              Icons.read_more,
+              FlutterIslamicIcons.mosque,
               color: MyColors().iconsColor(),
             ),
             trailing: Icon(

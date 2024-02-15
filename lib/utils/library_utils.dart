@@ -7,8 +7,12 @@ class MyColors {
     return Colors.blue;
   }
 
+  Color barIconsColor() {
+    return Colors.blue;
+  }
+
   Color iconsColor() {
-    return Colors.orange;
+    return Colors.white;
   }
 
   Color appBarIconsColor() {
@@ -21,6 +25,14 @@ class MyColors {
 
   Color appDrawHeadColor() {
     return Colors.white;
+  }
+
+  Color deleteIconColor() {
+    return Colors.redAccent;
+  }
+
+  Color cardIconColor() {
+    return Colors.orange.shade300;
   }
 }
 
@@ -74,7 +86,7 @@ AppBar myCustomAppBar(BuildContext context, String title, String title2) {
         ),
       ],
     ),
-    foregroundColor: MyColors().iconsColor(),
+    foregroundColor: MyColors().barIconsColor(),
   );
 }
 
