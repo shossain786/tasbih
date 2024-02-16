@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
             const Card(
               child: ListTile(
                 title: Text(
-                  'Hadise Paak:  Jo mujh par durud padhna bhul gaya woh jannat ki rah bhul gaya!',
+                  'Hadise Paak: Jo mujh par durud padhna bhul gaya woh jannat ki rah bhul gaya!',
                 ),
                 subtitle: Text(
                     'صلی اللہ علیہ والہ وسلم(Swallellaho alayhi wa aalihi wa sallam)'),

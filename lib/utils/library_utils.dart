@@ -68,20 +68,24 @@ AppBar myCustomAppBar(BuildContext context, String title, String title2) {
     title: Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Text(
-          title,
-          style: const TextStyle(
-            color: Colors.blue,
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
+        Flexible(
+          child: Text(
+            title,
+            style: const TextStyle(
+              color: Colors.blue,
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
-        Text(
-          title2,
-          style: const TextStyle(
-            color: Colors.orange,
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
+        Flexible(
+          child: Text(
+            title2,
+            style: const TextStyle(
+              color: Colors.orange,
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ],

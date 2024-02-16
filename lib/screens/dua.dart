@@ -10,21 +10,32 @@ class Dua {
   final String name;
   final String subtitle;
   final String details;
+  final String category;
+  final String tarjumah;
+  final String ahadees;
+  final String hawala;
 
   Dua({
     required this.id,
     required this.name,
     required this.subtitle,
     required this.details,
+    required this.category,
+    required this.tarjumah,
+    required this.ahadees,
+    required this.hawala,
   });
 
   factory Dua.fromJson(Map<String, dynamic> json) {
     return Dua(
-      id: json['id'],
-      name: json['name'],
-      subtitle: json['subtitle'],
-      details: json['details'],
-    );
+        id: json['id'],
+        name: json['name'],
+        subtitle: json['subtitle'],
+        details: json['details'],
+        category: json['category'],
+        ahadees: json["ahadees"] ?? "",
+        hawala: json["hawala"],
+        tarjumah: json["tarjumah"]);
   }
 }
 
@@ -55,7 +66,7 @@ class _DuaScreenState extends State<DuaScreen> {
         duas = items.map((item) => Dua.fromJson(item)).toList();
       });
     } else {
-      print("Error: Data format is incorrect. 'items' key not found.");
+      debugPrint("Error: Data format is incorrect. 'items' key not found.");
     }
   }
 

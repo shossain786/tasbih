@@ -56,12 +56,18 @@ android {
     }
 
     signingConfigs {
+    // release {
+    //     keyAlias keystoreProperties['keyAlias']
+    //     keyPassword keystoreProperties['keyPassword']
+    //     storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+    //     storePassword keystoreProperties['storePassword']
+    // }
     release {
-        keyAlias keystoreProperties['keyAlias']
-        keyPassword keystoreProperties['keyPassword']
-        storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
-        storePassword keystoreProperties['storePassword']
-    }
+            storeFile file("E:\\webs\\key.jks")
+            storePassword "0987890"
+            keyAlias "upload"
+            keyPassword "0987890"
+        }
    }
    buildTypes {
        release {
