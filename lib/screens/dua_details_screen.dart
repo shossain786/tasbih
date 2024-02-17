@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tasbih/screens/dua.dart';
+// import 'package:tasbih/screens/dua.dart';
+import 'package:tasbih/screens/dua1.dart';
 import 'package:tasbih/utils/library_utils.dart';
 
 class DuaDetailsScreen extends StatelessWidget {
-  final Dua dua;
+  final Dua1 dua;
 
   const DuaDetailsScreen({Key? key, required this.dua}) : super(key: key);
 

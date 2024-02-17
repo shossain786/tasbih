@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
-import 'package:tasbih/screens/dua_details_screen.dart';
+// import 'package:tasbih/screens/dua_details_screen.dart';
 import 'package:tasbih/utils/library_utils.dart';
 
 class Dua {
@@ -96,12 +96,12 @@ class _DuaScreenState extends State<DuaScreen> {
               ),
               subtitle: Text(duas[index].subtitle),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => DuaDetailsScreen(dua: duas[index]),
-                  ),
-                );
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     // builder: (context) => DuaDetailsScreen(dua: duas[index]),
+                //   ),
+                // );
               },
             ),
           );

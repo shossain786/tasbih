@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tasbih/about_us.dart';
 import 'package:tasbih/appdrawer.dart';
 import 'package:tasbih/counter_items.dart';
-import 'package:tasbih/screens/dua.dart';
+import 'package:tasbih/screens/dua1.dart';
 import 'package:tasbih/screens/durud_sharif.dart';
 import 'package:tasbih/utils/library_utils.dart';
 

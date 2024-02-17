@@ -22,8 +22,78 @@
     },
     {
       "id": "p3",
-      "name": "Khana Khane ki Dua",
-      "category": "khana",
+      "name": "Ghar se nikal ne ki dua",
+      "category": "Safar",
+      "subtitle":"بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
+      "details": "Bismillahir Rahmanir Rahim(بسم الله الرحمان الرحيم)",
+      "tarjumah": "Allah Ke Nam Se Suru jo bahot meherban rahmat wala",
+      "ahadees": "Ramdan",
+      "hawala": ""
+    },
+    {
+      "id": "p3",
+      "name": "Safar se wapas ane k baad",
+      "category": "Safar",
+      "subtitle":"بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
+      "details": "Bismillahir Rahmanir Rahim(بسم الله الرحمان الرحيم)",
+      "tarjumah": "Allah Ke Nam Se Suru jo bahot meherban rahmat wala",
+      "ahadees": "Ramdan",
+      "hawala": ""
+    },
+    {
+      "id": "p3",
+      "name": "Imaan ki hifaazat",
+      "category": "Imaan",
+      "subtitle":"بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
+      "details": "Bismillahir Rahmanir Rahim(بسم الله الرحمان الرحيم)",
+      "tarjumah": "Allah Ke Nam Se Suru jo bahot meherban rahmat wala",
+      "ahadees": "",
+      "hawala": ""
+    },
+    {
+      "id": "p3",
+      "name": "Rizq me barkat",
+      "category": "Khususi",
+      "subtitle":"بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
+      "details": "Bismillahir Rahmanir Rahim(بسم الله الرحمان الرحيم)",
+      "tarjumah": "Allah Ke Nam Se Suru jo bahot meherban rahmat wala",
+      "ahadees": "",
+      "hawala": ""
+    },
+    {
+      "id": "p3",
+      "name": "Toilet me dakhil hone ki dua",
+      "category": "Daily",
+      "subtitle":"بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
+      "details": "Bismillahir Rahmanir Rahim(بسم الله الرحمان الرحيم)",
+      "tarjumah": "Allah Ke Nam Se Suru jo bahot meherban rahmat wala",
+      "ahadees": "",
+      "hawala": ""
+    },
+    {
+      "id": "p3",
+      "name": "Toilet se nikal ne ki baad ki dua",
+      "category": "Daily",
+      "subtitle":"بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
+      "details": "Bismillahir Rahmanir Rahim(بسم الله الرحمان الرحيم)",
+      "tarjumah": "Allah Ke Nam Se Suru jo bahot meherban rahmat wala",
+      "ahadees": "",
+      "hawala": ""
+    },
+    {
+      "id": "p3",
+      "name": "Musafah karne ki dua",
+      "category": "Mulaqat",
+      "subtitle":"بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
+      "details": "Bismillahir Rahmanir Rahim(بسم الله الرحمان الرحيم)",
+      "tarjumah": "Allah Ke Nam Se Suru jo bahot meherban rahmat wala",
+      "ahadees": "",
+      "hawala": ""
+    },
+    {
+      "id": "p3",
+      "name": "Bimar ki yadat me dua",
+      "category": "Mulaqat",
       "subtitle":"بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
       "details": "Bismillahir Rahmanir Rahim(بسم الله الرحمان الرحيم)",
       "tarjumah": "Allah Ke Nam Se Suru jo bahot meherban rahmat wala",
