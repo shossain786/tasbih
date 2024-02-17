@@ -3,6 +3,7 @@ import 'package:tasbih/about_us.dart';
 import 'package:tasbih/appdrawer.dart';
 import 'package:tasbih/counter_items.dart';
 import 'package:tasbih/screens/dua.dart';
+import 'package:tasbih/screens/durud_sharif.dart';
 import 'package:tasbih/utils/library_utils.dart';
 
 void main() {
@@ -48,19 +49,22 @@ class HomePage extends StatelessWidget {
               child: ListTile(
                 title: Text(
                   'Hadise Paak: Jo mujh par durud padhna bhul gaya woh jannat ki rah bhul gaya!',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 subtitle: Text(
                     'صلی اللہ علیہ والہ وسلم(Swallellaho alayhi wa aalihi wa sallam)'),
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 4),
             const Card(
-              elevation: 20,
-              color: Color.fromARGB(255, 104, 252, 64),
+              elevation: 10,
+              color: Colors.orange,
               shape: RoundedRectangleBorder(
-                  side: BorderSide(color: Colors.deepPurple),
-                  borderRadius:
-                      BorderRadiusDirectional.all(Radius.circular(10))),
+                side: BorderSide(color: Colors.blue),
+                borderRadius: BorderRadiusDirectional.all(Radius.circular(10)),
+              ),
               child: SizedBox(
                 width: 400,
                 height: 40,
@@ -70,13 +74,30 @@ class HomePage extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 22,
-                      color: Color.fromARGB(255, 72, 2, 17),
+                      color: Colors.white,
                     ),
                   ),
                 ),
               ),
             ),
-            Image.asset('assets/juma_durud.png'),
+            const SizedBox(
+              height: 4,
+            ),
+            GestureDetector(
+              child: Image.asset(
+                'assets/juma_durud.png',
+                width: double.infinity,
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const DurudJuma(),
+                  ),
+                );
+              },
+            ),
+            const SizedBox(height: 4),
           ],
         ),
       ),

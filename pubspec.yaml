@@ -79,7 +79,7 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - assets/counter_pic.gif
+    # - assets/counter_pic.gif
     - assets/madina_pic.png
     - assets/juma_durud.png
     - assets/json_files/dua.json
