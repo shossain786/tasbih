@@ -1,15 +1,15 @@
-import 'dart:convert';
+import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tasbih/utils/library_utils.dart';
-// import 'package:vibration/vibration.dart';
+import 'dart:convert';
 
 class CountPage extends StatefulWidget {
   final String itemName;
 
-  const CountPage({super.key, required this.itemName});
+  const CountPage({Key? key, required this.itemName}) : super(key: key);
 
   @override
   _CountPageState createState() => _CountPageState();
@@ -18,6 +18,7 @@ class CountPage extends StatefulWidget {
 class _CountPageState extends State<CountPage> {
   int count = 0;
   int targetCount = 0;
+  static const int totalDots = 100;
 
   @override
   void initState() {
@@ -28,7 +29,35 @@ class _CountPageState extends State<CountPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myCustomAppBar(context, 'Tasbih-', widget.itemName),
+      appBar: AppBar(
+        title: Row(
+          children: [
+            const Text(
+              'Tasbih -',
+              style: TextStyle(
+                color: Colors.blue,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              widget.itemName,
+              style: const TextStyle(
+                color: Colors.orange,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+        foregroundColor: Colors.blue,
+        actions: [
+          IconButton(
+            onPressed: _resetCount,
+            icon: const Icon(Icons.restore),
+          ),
+        ],
+      ),
       body: InkWell(
         onTap: () {
           _incrementCount();
@@ -40,23 +69,44 @@ class _CountPageState extends State<CountPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'Count: $count',
-                style: const TextStyle(
-                  fontSize: 30,
-                ),
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  _buildCircularDots(),
+                  Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '$count/',
+                            style: const TextStyle(
+                              fontSize: 36,
+                              color: Colors.blue,
+                            ),
+                          ),
+                          Text(
+                            '$targetCount',
+                            style: const TextStyle(
+                              fontSize: 36,
+                              color: Colors.orange,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              Text('Target Count: $targetCount'),
-              const SizedBox(height: 10),
-              Image.asset(
-                'assets/counter_pic.gif',
-                width: double.infinity,
+              const Icon(
+                FlutterIslamicIcons.tasbihHand,
+                size: 140,
+                color: Colors.blue,
               ),
             ],
           ),
         ),
       ),
-      // backgroundColor: const Color.fromARGB(135, 217, 246, 73),
     );
   }
 
@@ -65,10 +115,39 @@ class _CountPageState extends State<CountPage> {
       count++;
       _saveCount();
       if (count == targetCount) {
-        // Vibration.vibrate(duration: 100);
         _showContinuePrompt();
       }
     });
+  }
+
+  Widget _buildCircularDots() {
+    double percentageRemaining =
+        targetCount != 0 ? 1 - (count / targetCount) : 1;
+    int remainingDots = (percentageRemaining * totalDots).round();
+
+    return SizedBox(
+      width: 200,
+      height: 200,
+      child: Stack(
+        children: List.generate(totalDots, (index) {
+          double angle = 2 * pi * index / totalDots;
+          double radius = 95;
+          double dotRadius = 4;
+          return Positioned(
+            top: radius * cos(angle) + radius,
+            left: radius * sin(angle) + radius,
+            child: Container(
+              width: dotRadius,
+              height: dotRadius,
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                color: index < remainingDots ? Colors.orange : Colors.blue,
+              ),
+            ),
+          );
+        }),
+      ),
+    );
   }
 
   Future<void> _showContinuePrompt() async {
@@ -103,7 +182,6 @@ class _CountPageState extends State<CountPage> {
         );
       },
     );
-    // Navigator.pop(context);
   }
 
   void _resetCount() {
@@ -165,5 +243,36 @@ class _CountPageState extends State<CountPage> {
     final prefs = await SharedPreferences.getInstance();
     prefs.setInt('${widget.itemName}_count', count);
     prefs.setInt('${widget.itemName}_targetCount', targetCount);
+  }
+}
+
+class ProgressPainter extends CustomPainter {
+  final double progress;
+
+  ProgressPainter({required this.progress});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    Paint dotPaint = Paint()
+      ..color = Colors.blue
+      ..strokeWidth = 10
+      ..strokeCap = StrokeCap.round;
+
+    double radius = size.width / 2;
+    Offset center = Offset(radius, radius);
+
+    canvas.drawCircle(center, radius, Paint()..color = Colors.grey);
+
+    for (double i = 0; i < progress * 10; i++) {
+      double angle = (2 * pi / 10) * i;
+      double x = radius + radius * 0.8 * cos(angle);
+      double y = radius + radius * 0.8 * sin(angle);
+      canvas.drawPoints(PointMode.points, [Offset(x, y)], dotPaint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return true;
   }
 }
