@@ -64,6 +64,7 @@ class _CounterHomeState extends State<CounterHome> {
                           style: const TextStyle(
                             fontFamily: "Poppins-Bold",
                             fontWeight: FontWeight.bold,
+                            fontSize: 22,
                           ),
                         ),
                         subtitle: Text(

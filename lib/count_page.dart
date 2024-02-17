@@ -1,7 +1,9 @@
 import 'dart:convert';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tasbih/utils/library_utils.dart';
 // import 'package:vibration/vibration.dart';
 
 class CountPage extends StatefulWidget {
@@ -26,35 +28,7 @@ class _CountPageState extends State<CountPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: [
-            const Text(
-              'Tasbih -',
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text(
-              widget.itemName,
-              style: const TextStyle(
-                color: Colors.orange,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-        foregroundColor: Colors.blue,
-        actions: [
-          IconButton(
-            onPressed: _resetCount,
-            icon: const Icon(Icons.restore),
-          ),
-        ],
-      ),
+      appBar: myCustomAppBar(context, 'Tasbih-', widget.itemName),
       body: InkWell(
         onTap: () {
           _incrementCount();
@@ -82,6 +56,7 @@ class _CountPageState extends State<CountPage> {
           ),
         ),
       ),
+      // backgroundColor: const Color.fromARGB(135, 217, 246, 73),
     );
   }
 
