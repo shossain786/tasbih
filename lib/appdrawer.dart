@@ -103,7 +103,9 @@ class _MyAppDrawerState extends State<MyAppDrawer> {
               Icons.chevron_right_rounded,
               color: MyColors().iconsColor(),
             ),
-            onTap: () {},
+            onTap: () {
+              // Navigator.pushNamed(context, '/vibrate');
+            },
           ),
           const Divider(color: Colors.white12, height: 1),
           ListTile(

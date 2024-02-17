@@ -22,6 +22,7 @@ class TasbihAPP extends StatelessWidget {
         '/counter': (context) => const CounterHome(),
         '/duain': (context) => const DuaScreen(),
         '/aboutus': (context) => const AboutUsPage(),
+        // '/vibrate': (context) => const MyApp(),
       },
     );
   }

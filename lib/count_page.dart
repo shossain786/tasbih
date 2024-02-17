@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
+import 'package:flutter_vibrate/flutter_vibrate.dart';
 
 class CountPage extends StatefulWidget {
   final String itemName;
@@ -20,10 +21,28 @@ class _CountPageState extends State<CountPage> {
   int targetCount = 0;
   static const int totalDots = 100;
 
+  late bool _canVibrate = true;
+  final Iterable<Duration> pauses = [
+    const Duration(milliseconds: 500),
+    const Duration(milliseconds: 1000),
+    const Duration(milliseconds: 500),
+  ];
+
   @override
   void initState() {
     super.initState();
     _loadCount();
+    _init();
+  }
+
+  Future<void> _init() async {
+    bool canVibrate = await Vibrate.canVibrate;
+    setState(() {
+      _canVibrate = canVibrate;
+      _canVibrate
+          ? debugPrint('This device can vibrate')
+          : debugPrint('This device cannot vibrate');
+    });
   }
 
   @override
@@ -62,6 +81,9 @@ class _CountPageState extends State<CountPage> {
         onTap: () {
           _incrementCount();
           if (count == targetCount) {
+            if (_canVibrate) {
+              Vibrate.feedback(FeedbackType.error);
+            }
             _showContinuePrompt();
           }
         },
