@@ -7,7 +7,7 @@
       "subtitle":"بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
       "details": "Bismillahir Rahmanir Rahim(بسم اللہ الرحمن الرحیم)",
       "tarjumah": "Allah(عزوجل) Ke Nam Se Suru jo bahot meherban rahmat wala",
-      "hadees": "Hazrat e Ayesha siddiqa (رضی اللہ تعالی عنہا) se rewayat hai ki huzur tajdar E Madina صلی اللہ تعالی علیہ وسلم new farmaya ki Jab Tum me se koi sakhs  sexkhana khaye to bismillah kahe. Agar bismillah kahna bhul jae to  بِسْمِ اللهِ اَوَّلَهُ وَ اٰخِرِهٗ(bismillahi awwalahu wa aakhirahu) kahe.",
+      "ahadees": "Hazrat e Ayesha Siddiqa(رضی اللہ تعالی عنہا) se rewayat hai ki huzur tajdar E Madina صلی اللہ تعالی علیہ وسلم new farmaya ki Jab Tum me se koi shakhs khana khaye to bismillah kahe. Agar bismillah kahna bhul jae to بِسْمِ اللهِ اَوَّلَهُ وَ اٰخِرِهٗ(bismillahi awwalahu wa aakhirahu) kahe.",
       "hawala": "Abu daud 3, Tirmiji 2 safah 8"
     },
     {
@@ -16,10 +16,9 @@
       "category": "khana",
       "subtitle":"اَلْحَمْدُ لِلّٰهِ الَّذِىْ اَطْعَمَناَ وَ سَقَاناَ وَ جَعَلَناَ مِنَ الْمُسْلِمِيْنَ",
       "details": "اَلْحَمْدُ لِلّٰهِ الَّذِىْ اَطْعَمَناَ وَ سَقَاناَ وَ جَعَلَناَ مِنَ الْمُسْلِمِيْنَ",
-      "tarjumah": "Allah(عزوجل) ka shukr hai ki jis ne Humko Khilaya aur Pilaya Humko musalmanon mein se Banaya",
-      "hadees": " Hazrat Abu Saeed khudri ( رضی اللہ تعالی عنہ) se rwayat hai ki Huzoor tajdar a Madina (صلی اللہ تعالی علیہ وسلم) Jab khana khate to e farmate  Alhamdulillahillazi atamanaa wa saqana wa jayalanaa minal muslimeen.",
+      "tarjumah": "Allah(عزوجل) ka shukr hai ki jis ne Humko Khilaya aur Pilaya Humko musalmanon mein se banaya",
+      "ahadees": " Hazrat Abu Saeed Khudri( رضی اللہ تعالی عنہ) se rwayat hai ki Huzoor tajdar a Madina (صلی اللہ تعالی علیہ وسلم) Jab khana khate to e farmate  Alhamdulillahillazi atamanaa wa saqana wa jayalanaa minal muslimeen.",
       "hawala": "( Abu Dawood 3 safah 182, Ibn maja 244)"
-      
     },
     {
       "id": "p3",
@@ -28,7 +27,7 @@
       "subtitle":"بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
       "details": "Bismillahir Rahmanir Rahim(بسم الله الرحمان الرحيم)",
       "tarjumah": "Allah Ke Nam Se Suru jo bahot meherban rahmat wala",
-      "hadees": "",
+      "ahadees": "",
       "hawala": ""
     }
   ]
