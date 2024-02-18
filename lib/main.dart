@@ -46,6 +46,12 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             const Card(
+              shadowColor: Colors.blue,
+              elevation: 3.0,
+              shape: RoundedRectangleBorder(
+                side: BorderSide(color: Colors.blue),
+                borderRadius: BorderRadiusDirectional.all(Radius.circular(10)),
+              ),
               child: ListTile(
                 title: Text(
                   'Hadise Paak: Jo mujh par durud padhna bhul gaya woh jannat ki rah bhul gaya!',
@@ -59,7 +65,7 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 4),
             const Card(
-              elevation: 10,
+              elevation: 3,
               color: Colors.orange,
               shape: RoundedRectangleBorder(
                 side: BorderSide(color: Colors.blue),
@@ -81,21 +87,33 @@ class HomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 4,
+              height: 1,
             ),
-            GestureDetector(
-              child: Image.asset(
-                'assets/juma_durud.png',
-                width: double.infinity,
-              ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const DurudJuma(),
+            Padding(
+              padding: const EdgeInsets.only(left: 2.0, right: 2.0),
+              child: Card(
+                elevation: 3.0,
+                shadowColor: Colors.blue,
+                shape: const RoundedRectangleBorder(
+                  side: BorderSide(color: Colors.blue),
+                  borderRadius:
+                      BorderRadiusDirectional.all(Radius.circular(10)),
+                ),
+                child: GestureDetector(
+                  child: Image.asset(
+                    'assets/juma_durud.png',
+                    width: double.infinity,
                   ),
-                );
-              },
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DurudJuma(),
+                      ),
+                    );
+                  },
+                ),
+              ),
             ),
             const SizedBox(height: 4),
           ],
