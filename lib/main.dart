@@ -23,7 +23,7 @@ class TasbihAPP extends StatelessWidget {
         '/counter': (context) => const CounterHome(),
         '/duain': (context) => const DuaScreen(),
         '/aboutus': (context) => const AboutUsPage(),
-        // '/vibrate': (context) => const MyApp(),
+        // '/adab': (context) => const AdabOSunnatScreen(),
       },
     );
   }
@@ -72,7 +72,8 @@ class HomePage extends StatelessWidget {
                 borderRadius: BorderRadiusDirectional.all(Radius.circular(10)),
               ),
               child: SizedBox(
-                width: 400,
+                // width: ,
+                width: double.infinity,
                 height: 40,
                 child: Center(
                   child: Text(

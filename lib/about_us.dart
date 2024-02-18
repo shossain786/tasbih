@@ -46,7 +46,7 @@ class AboutUsPage extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.check),
               title: Text(
-                  'Some important dua and duruds also will be available very soon.'),
+                  'Some important dua, Adab o Sunnat, Fatiha ki tariqah and duruds also will be available very soon.'),
             ),
             SizedBox(height: 16),
             Text(

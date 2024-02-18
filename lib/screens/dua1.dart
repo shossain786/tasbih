@@ -112,6 +112,7 @@ class _DuaScreenState extends State<DuaScreen> {
             dividerHeight: 2.0,
             labelColor: Colors.red,
             unselectedLabelColor: Colors.blue,
+            tabAlignment: TabAlignment.start,
             unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
             indicator: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
@@ -149,7 +150,7 @@ class _DuaScreenState extends State<DuaScreen> {
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
-                        fontSize: 18,
+                        fontSize: 20,
                       ),
                     ),
                     subtitle: Text(groupedDuas[category]![index].subtitle),
@@ -163,7 +164,10 @@ class _DuaScreenState extends State<DuaScreen> {
                         ),
                       );
                     },
-                    trailing: const Icon(Icons.arrow_right),
+                    trailing: const Icon(
+                      Icons.arrow_right,
+                      color: Colors.white,
+                    ),
                   ),
                 );
               },

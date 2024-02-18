@@ -64,7 +64,7 @@ class _MyAppDrawerState extends State<MyAppDrawer> {
             tileColor: MyColors().bgColor(),
             title: drawerTextStyle('Tasbih'),
             leading: Icon(
-              FlutterIslamicIcons.solidTasbihHand,
+              FlutterIslamicIcons.tasbihHand,
               color: MyColors().iconsColor(),
             ),
             trailing: Icon(
@@ -73,6 +73,22 @@ class _MyAppDrawerState extends State<MyAppDrawer> {
             ),
             onTap: () {
               Navigator.pushNamed(context, '/counter');
+            },
+          ),
+          const Divider(color: Colors.white12, height: 1),
+          ListTile(
+            tileColor: MyColors().bgColor(),
+            title: drawerTextStyle('Namaaz'),
+            leading: Icon(
+              FlutterIslamicIcons.sajadah,
+              color: MyColors().iconsColor(),
+            ),
+            trailing: Icon(
+              Icons.chevron_right_rounded,
+              color: MyColors().iconsColor(),
+            ),
+            onTap: () {
+              // Navigator.pushNamed(context, '/namaz');
             },
           ),
           const Divider(color: Colors.white12, height: 1),
@@ -97,6 +113,22 @@ class _MyAppDrawerState extends State<MyAppDrawer> {
             title: drawerTextStyle('Fatiiha ki Tariqah'),
             leading: Icon(
               FlutterIslamicIcons.mosque,
+              color: MyColors().iconsColor(),
+            ),
+            trailing: Icon(
+              Icons.chevron_right_rounded,
+              color: MyColors().iconsColor(),
+            ),
+            onTap: () {
+              // Navigator.pushNamed(context, '/vibrate');
+            },
+          ),
+          const Divider(color: Colors.white12, height: 1),
+          ListTile(
+            tileColor: MyColors().bgColor(),
+            title: drawerTextStyle('Adab O Sunnat'),
+            leading: Icon(
+              FlutterIslamicIcons.islam,
               color: MyColors().iconsColor(),
             ),
             trailing: Icon(

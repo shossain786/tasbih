@@ -24,7 +24,11 @@ class DurudJuma extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Text(
-                    '    Buzurgan e Deen Ne Farmaya Ke Jo Shaks Har Shab E Jumma (Jumuah (Friday) or Jumerat (Thursday) Ke Darmiyani Raat) Is Darood Sharif Ko Pabandi Se kam-az-kam ek martaba (atleast 1 time) padhega to maut (death) k waqt Sarkare Madina ﷺ ki ziyarat karega aur kabr main dakhil hote waqt bhi, yaha tak ki wo dekhega ki sarkare madina Hazrat Muhammad ﷺ use kabr me apne rehmat bhare hatho se utar rahe hain.'),
+                  '    Buzurgan e Deen Ne Farmaya Ke Jo Shaks Har Shab E Jumma (Jumuah (Friday) or Jumerat (Thursday) Ke Darmiyani Raat) Is Darood Sharif Ko Pabandi Se kam-az-kam ek martaba (atleast 1 time) padhega to maut (death) k waqt Sarkare Madina ﷺ ki ziyarat karega aur kabr main dakhil hote waqt bhi, yaha tak ki wo dekhega ki sarkare madina Hazrat Muhammad ﷺ use kabr me apne rehmat bhare hatho se utar rahe hain.',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
                 SizedBox(
                   height: 10,
                 ),
