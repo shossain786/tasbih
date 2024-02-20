@@ -115,6 +115,9 @@ class _CounterHomeState extends State<CounterHome> {
 
         return AlertDialog(
           backgroundColor: Colors.white,
+          elevation: 10.0,
+          shadowColor: Colors.orange,
+          surfaceTintColor: Colors.blue,
           title: const Text(
             'New Tasbih',
             style: TextStyle(

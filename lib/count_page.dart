@@ -120,6 +120,9 @@ class _CountPageState extends State<CountPage> {
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 100,
+              ),
               const Icon(
                 FlutterIslamicIcons.tasbihHand,
                 size: 140,
@@ -178,7 +181,16 @@ class _CountPageState extends State<CountPage> {
       barrierDismissible: false,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Target Reached'),
+          title: const Text(
+            'Target Reached',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.blue,
+            ),
+          ),
+          elevation: 10.0,
+          shadowColor: Colors.orange,
+          surfaceTintColor: Colors.blue,
           content: const Text(
               'You have reached the target count. Do you want to continue counting?'),
           actions: [
@@ -188,6 +200,7 @@ class _CountPageState extends State<CountPage> {
                   count = 0;
                 });
                 _saveCount();
+                Navigator.pop(context);
                 Navigator.pop(context);
                 Navigator.pop(context);
               },
@@ -212,7 +225,16 @@ class _CountPageState extends State<CountPage> {
       barrierDismissible: false,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Reset Count'),
+          elevation: 10.0,
+          shadowColor: Colors.orange,
+          surfaceTintColor: Colors.blue,
+          title: const Text(
+            'Reset Count',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.blue,
+            ),
+          ),
           content: const Text('Are you sure you want to reset the count?'),
           actions: [
             TextButton(
