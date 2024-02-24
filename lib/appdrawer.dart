@@ -88,7 +88,7 @@ class _MyAppDrawerState extends State<MyAppDrawer> {
               color: MyColors().iconsColor(),
             ),
             onTap: () {
-              // Navigator.pushNamed(context, '/namaz');
+              Navigator.pushNamed(context, '/namaz');
             },
           ),
           const Divider(color: Colors.white12, height: 1),
@@ -96,7 +96,7 @@ class _MyAppDrawerState extends State<MyAppDrawer> {
             tileColor: MyColors().bgColor(),
             title: drawerTextStyle('Masnoon Duain'),
             leading: Icon(
-              FlutterIslamicIcons.locationMosque,
+              FlutterIslamicIcons.prayer,
               color: MyColors().iconsColor(),
             ),
             trailing: Icon(
@@ -105,6 +105,22 @@ class _MyAppDrawerState extends State<MyAppDrawer> {
             ),
             onTap: () {
               Navigator.pushNamed(context, '/duain');
+            },
+          ),
+          const Divider(color: Colors.white12, height: 1),
+          ListTile(
+            tileColor: MyColors().bgColor(),
+            title: drawerTextStyle('Shab e Berat'),
+            leading: Icon(
+              FlutterIslamicIcons.crescentMoon,
+              color: MyColors().iconsColor(),
+            ),
+            trailing: Icon(
+              Icons.chevron_right_rounded,
+              color: MyColors().iconsColor(),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/shabebarat');
             },
           ),
           const Divider(color: Colors.white12, height: 1),
@@ -120,7 +136,7 @@ class _MyAppDrawerState extends State<MyAppDrawer> {
               color: MyColors().iconsColor(),
             ),
             onTap: () {
-              // Navigator.pushNamed(context, '/vibrate');
+              Navigator.pushNamed(context, '/fatiha');
             },
           ),
           const Divider(color: Colors.white12, height: 1),
@@ -136,7 +152,7 @@ class _MyAppDrawerState extends State<MyAppDrawer> {
               color: MyColors().iconsColor(),
             ),
             onTap: () {
-              // Navigator.pushNamed(context, '/vibrate');
+              Navigator.pushNamed(context, '/adab');
             },
           ),
           const Divider(color: Colors.white12, height: 1),

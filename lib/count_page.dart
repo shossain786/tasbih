@@ -82,7 +82,7 @@ class _CountPageState extends State<CountPage> {
           _incrementCount();
           if (count == targetCount) {
             if (_canVibrate) {
-              Vibrate.feedback(FeedbackType.error);
+              Vibrate.feedback(FeedbackType.warning);
             }
             _showContinuePrompt();
           }

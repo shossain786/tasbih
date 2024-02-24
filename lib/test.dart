@@ -1,141 +1,98 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_vibrate/flutter_vibrate.dart';
+import 'package:http/http.dart' as http;
+import 'package:path_provider/path_provider.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  _MyAppState createState() => _MyAppState();
+void main() {
+  runApp(const MaterialApp(
+    home: DataPage(),
+  ));
 }
 
-class _MyAppState extends State<MyApp> {
-  bool _canVibrate = true;
-  final Iterable<Duration> pauses = [
-    const Duration(milliseconds: 500),
-    const Duration(milliseconds: 1000),
-    const Duration(milliseconds: 500),
-  ];
+class DataPage extends StatefulWidget {
+  const DataPage({super.key});
+
+  @override
+  _DataPageState createState() => _DataPageState();
+}
+
+class _DataPageState extends State<DataPage> {
+  String _jsonData = '';
 
   @override
   void initState() {
     super.initState();
-    _init();
+    loadData();
   }
 
-  Future<void> _init() async {
-    bool canVibrate = await Vibrate.canVibrate;
-    setState(() {
-      _canVibrate = canVibrate;
-      _canVibrate
-          ? debugPrint('This device can vibrate')
-          : debugPrint('This device cannot vibrate');
-    });
+  Future<void> loadData() async {
+    // Check if local file exists
+    File file = await _getLocalFile();
+    if (await file.exists()) {
+      // Load data from local file
+      String jsonData = await file.readAsString();
+      setState(() {
+        _jsonData = jsonData;
+      });
+    } else {
+      // Fetch data from network
+      fetchData();
+    }
+  }
+
+  Future<void> fetchData() async {
+    try {
+      final response = await http.get(Uri.parse(
+          'https://drive.google.com/file/d/1sJG39ZFhw4Io2IZ0uzw2YL980RXZY4Kb/view?usp=sharing'));
+      if (response.statusCode == 200) {
+        final contentType = response.headers['content-type'];
+        if (contentType != null && contentType.contains('application/json')) {
+          // Store data locally
+          File file = await _getLocalFile();
+          await file.writeAsString(response.body);
+          setState(() {
+            _jsonData = response.body;
+          });
+        } else {
+          throw Exception(
+              'Response content type is not JSON. Content-Type: $contentType');
+        }
+      } else {
+        throw Exception('Failed to fetch data from the network');
+      }
+    } catch (e) {
+      print('Error: $e');
+    }
+  }
+
+  Future<File> _getLocalFile() async {
+    final directory = await getApplicationDocumentsDirectory();
+    return File('${directory.path}/data.json');
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: const Text('Haptic Feedback Example')),
-        body: Center(
-          child: ListView(children: [
-            ListTile(
-              title: const Text('Vibrate'),
-              leading: const Icon(Icons.vibration, color: Colors.teal),
-              onTap: () {
-                if (_canVibrate) Vibrate.vibrate;
-              },
-            ),
-            ListTile(
-              title: const Text('Vibrate with Pauses'),
-              leading: const Icon(Icons.vibration, color: Colors.brown),
-              onTap: () {
-                if (_canVibrate) {
-                  Vibrate.vibrateWithPauses(pauses);
-                }
-              },
-            ),
-            const Divider(height: 1),
-            ListTile(
-              title: const Text('Impact'),
-              leading: const Icon(Icons.tap_and_play, color: Colors.orange),
-              onTap: () {
-                if (_canVibrate) {
-                  Vibrate.feedback(FeedbackType.impact);
-                }
-              },
-            ),
-            ListTile(
-              title: const Text('Selection'),
-              leading: const Icon(Icons.select_all, color: Colors.blue),
-              onTap: () {
-                if (_canVibrate) {
-                  Vibrate.feedback(FeedbackType.selection);
-                }
-              },
-            ),
-            ListTile(
-              title: const Text('Success'),
-              leading: const Icon(Icons.check, color: Colors.green),
-              onTap: () {
-                if (_canVibrate) {
-                  Vibrate.feedback(FeedbackType.success);
-                }
-              },
-            ),
-            ListTile(
-              title: const Text('Warning'),
-              leading: const Icon(Icons.warning, color: Colors.red),
-              onTap: () {
-                if (_canVibrate) {
-                  Vibrate.feedback(FeedbackType.warning);
-                }
-              },
-            ),
-            ListTile(
-              title: const Text('Error'),
-              leading: const Icon(Icons.error, color: Colors.red),
-              onTap: () {
-                if (_canVibrate) {
-                  Vibrate.feedback(FeedbackType.error);
-                }
-              },
-            ),
-            const Divider(height: 1),
-            ListTile(
-              title: const Text('Heavy'),
-              leading:
-                  const Icon(Icons.notification_important, color: Colors.red),
-              onTap: () {
-                if (_canVibrate) {
-                  Vibrate.feedback(FeedbackType.heavy);
-                }
-              },
-            ),
-            ListTile(
-              title: const Text('Medium'),
-              leading:
-                  const Icon(Icons.notification_important, color: Colors.green),
-              onTap: () {
-                if (_canVibrate) {
-                  Vibrate.feedback(FeedbackType.medium);
-                }
-              },
-            ),
-            ListTile(
-              title: const Text('Light'),
-              leading:
-                  Icon(Icons.notification_important, color: Colors.yellow[700]),
-              onTap: () {
-                if (_canVibrate) {
-                  Vibrate.feedback(FeedbackType.light);
-                }
-              },
-            ),
-          ]),
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Data Page'),
+      ),
+      body: Center(
+        child: _jsonData.isEmpty
+            ? const CircularProgressIndicator()
+            : SingleChildScrollView(
+                child: Container(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text(
+                    _jsonData,
+                    style: const TextStyle(fontSize: 16.0),
+                  ),
+                ),
+              ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: fetchData,
+        child: const Icon(Icons.sync),
       ),
     );
   }
