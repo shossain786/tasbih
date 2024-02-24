@@ -217,16 +217,19 @@ class ShabEBaratDetailsScreen extends StatelessWidget {
                         color: Colors.orange,
                         thickness: 2.0,
                       ),
-                      Text(
-                        'Hawala: ${shabebaratItem.hawala}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 10,
+                      Visibility(
+                        visible: shabebaratItem.hawala.isNotEmpty,
+                        child: Text(
+                          'Hawala: ${shabebaratItem.hawala}',
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 10,
+                          ),
                         ),
                       ),
                       const SizedBox(
                         height: 10,
-                      )
+                      ),
                     ],
                   ),
                 ),

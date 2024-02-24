@@ -3,6 +3,7 @@ import 'package:tasbih/appdrawer.dart';
 import 'package:tasbih/counter_items.dart';
 import 'package:tasbih/screens/dua1.dart';
 import 'package:tasbih/screens/durud_sharif.dart';
+import 'package:tasbih/screens/shab_e_berat.dart';
 import 'package:tasbih/utils/library_utils.dart';
 
 class HomePage extends StatelessWidget {
@@ -104,49 +105,75 @@ class HomePage extends StatelessWidget {
                   borderRadius:
                       BorderRadiusDirectional.all(Radius.circular(10)),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.orange),
-                        elevation: const MaterialStatePropertyAll(4),
-                        shadowColor: MaterialStateProperty.all(Colors.blue),
-                        foregroundColor:
-                            MaterialStateProperty.all(Colors.black),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const CounterHome(),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.orange),
+                            elevation: const MaterialStatePropertyAll(4),
+                            shadowColor: MaterialStateProperty.all(Colors.blue),
+                            foregroundColor:
+                                MaterialStateProperty.all(Colors.black),
                           ),
-                        );
-                      },
-                      child: const Text('Go To Tasbih'),
-                    ),
-                    const Padding(padding: EdgeInsets.only(left: 10)),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const DuaScreen(),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const CounterHome(),
+                              ),
+                            );
+                          },
+                          child: const Text('Go To Tasbih'),
+                        ),
+                        const Padding(padding: EdgeInsets.only(left: 10)),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const DuaScreen(),
+                              ),
+                            );
+                          },
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.orange),
+                            elevation: const MaterialStatePropertyAll(4),
+                            shadowColor: MaterialStateProperty.all(Colors.blue),
+                            foregroundColor:
+                                MaterialStateProperty.all(Colors.black),
                           ),
-                        );
-                      },
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.orange),
-                        elevation: const MaterialStatePropertyAll(4),
-                        shadowColor: MaterialStateProperty.all(Colors.blue),
-                        foregroundColor:
-                            MaterialStateProperty.all(Colors.black),
-                      ),
-                      child: const Text('Duain'),
+                          child: const Text('Duain'),
+                        ),
+                        const Padding(padding: EdgeInsets.only(left: 10)),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const ShabeBaraatScreen(),
+                              ),
+                            );
+                          },
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.orange),
+                            elevation: const MaterialStatePropertyAll(4),
+                            shadowColor: MaterialStateProperty.all(Colors.blue),
+                            foregroundColor:
+                                MaterialStateProperty.all(Colors.black),
+                          ),
+                          child: const Text('Shab E Barat'),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
             ],
