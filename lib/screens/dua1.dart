@@ -121,10 +121,10 @@ class _DuaScreenState extends State<DuaScreen> {
             tabs: groupedDuas.keys.map((category) {
               return Tab(
                 text: category,
-                icon: const Icon(
-                  FlutterIslamicIcons.islam,
-                  size: 15,
-                ),
+                // icon: const Icon(
+                //   FlutterIslamicIcons.islam,
+                //   size: 15,
+                // ),
               );
             }).toList(),
           ),

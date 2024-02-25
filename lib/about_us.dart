@@ -50,10 +50,14 @@ class AboutUsPage extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
+              'All the informations are taken from proved imalic books followed by Ahl eSunnat wal Jamat. In case of any concern please raise a concer or directly connect with me at email id the geiven below.',
+            ),
+            SizedBox(height: 10),
+            Text(
               'We are continuously working on improving and adding new features to enhance your reading experience. If you have any suggestions, issues, or feedback, feel free to reach out to us at:',
               style: TextStyle(fontSize: 16),
             ),
-            SizedBox(height: 4),
+            SizedBox(height: 10),
             Row(
               children: [
                 Icon(Icons.email, color: Color.fromARGB(255, 3, 36, 94)),
@@ -61,6 +65,7 @@ class AboutUsPage extends StatelessWidget {
                 Text(
                   'sddmhossain786@gmail.com',
                   style: TextStyle(
+                    fontSize: 15,
                     fontStyle: FontStyle.italic,
                     color: Color.fromARGB(255, 3, 36, 94),
                     fontWeight: FontWeight.bold,
