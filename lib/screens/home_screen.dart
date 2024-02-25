@@ -105,75 +105,83 @@ class HomePage extends StatelessWidget {
                   borderRadius:
                       BorderRadiusDirectional.all(Radius.circular(10)),
                 ),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.orange),
-                            elevation: const MaterialStatePropertyAll(4),
-                            shadowColor: MaterialStateProperty.all(Colors.blue),
-                            foregroundColor:
-                                MaterialStateProperty.all(Colors.black),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const CounterHome(),
+                child: Column(
+                  children: [
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all(Colors.orange),
+                                elevation: const MaterialStatePropertyAll(4),
+                                shadowColor:
+                                    MaterialStateProperty.all(Colors.blue),
+                                foregroundColor:
+                                    MaterialStateProperty.all(Colors.black),
                               ),
-                            );
-                          },
-                          child: const Text('Go To Tasbih'),
-                        ),
-                        const Padding(padding: EdgeInsets.only(left: 10)),
-                        ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const DuaScreen(),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const CounterHome(),
+                                  ),
+                                );
+                              },
+                              child: const Text('Go To Tasbih'),
+                            ),
+                            const Padding(padding: EdgeInsets.only(left: 10)),
+                            ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const DuaScreen(),
+                                  ),
+                                );
+                              },
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all(Colors.orange),
+                                elevation: const MaterialStatePropertyAll(4),
+                                shadowColor:
+                                    MaterialStateProperty.all(Colors.blue),
+                                foregroundColor:
+                                    MaterialStateProperty.all(Colors.black),
                               ),
-                            );
-                          },
-                          style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.orange),
-                            elevation: const MaterialStatePropertyAll(4),
-                            shadowColor: MaterialStateProperty.all(Colors.blue),
-                            foregroundColor:
-                                MaterialStateProperty.all(Colors.black),
-                          ),
-                          child: const Text('Duain'),
-                        ),
-                        const Padding(padding: EdgeInsets.only(left: 10)),
-                        ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const ShabeBaraatScreen(),
+                              child: const Text('Duain'),
+                            ),
+                            const Padding(padding: EdgeInsets.only(left: 10)),
+                            ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ShabeBaraatScreen(),
+                                  ),
+                                );
+                              },
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all(Colors.orange),
+                                elevation: const MaterialStatePropertyAll(4),
+                                shadowColor:
+                                    MaterialStateProperty.all(Colors.blue),
+                                foregroundColor:
+                                    MaterialStateProperty.all(Colors.black),
                               ),
-                            );
-                          },
-                          style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.orange),
-                            elevation: const MaterialStatePropertyAll(4),
-                            shadowColor: MaterialStateProperty.all(Colors.blue),
-                            foregroundColor:
-                                MaterialStateProperty.all(Colors.black),
-                          ),
-                          child: const Text('Shab E Barat'),
+                              child: const Text('Shab E Barat'),
+                            ),
+                          ],
                         ),
-                      ],
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ),
             ],
