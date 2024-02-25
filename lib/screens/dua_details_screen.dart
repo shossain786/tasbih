@@ -48,15 +48,18 @@ class DuaDetailsScreen extends StatelessWidget {
                         color: Colors.orange,
                         thickness: 2.0,
                       ),
-                      const Row(
+                      Row(
                         children: [
-                          Text(
-                            'Tarjuma:',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
+                          Visibility(
+                            visible: dua.tarjumah.isNotEmpty,
+                            child: const Text(
+                              'Tarjuma:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                       Text(
@@ -67,13 +70,16 @@ class DuaDetailsScreen extends StatelessWidget {
                         color: Colors.orange,
                         thickness: 2.0,
                       ),
-                      const Row(
+                      Row(
                         children: [
-                          Text(
-                            'Hadeess:',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
+                          Visibility(
+                            visible: dua.ahadees.isNotEmpty,
+                            child: const Text(
+                              'Hadis:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
                             ),
                           )
                         ],
@@ -86,13 +92,16 @@ class DuaDetailsScreen extends StatelessWidget {
                         color: Colors.orange,
                         thickness: 2.0,
                       ),
-                      const Row(
+                      Row(
                         children: [
-                          Text(
-                            'Hawala:',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
+                          Visibility(
+                            visible: dua.hawala.isNotEmpty,
+                            child: const Text(
+                              'Hawala:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
                             ),
                           )
                         ],
