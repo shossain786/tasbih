@@ -50,7 +50,8 @@ class AboutUsPage extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              'All the informations are taken from proved imalic books followed by Ahl eSunnat wal Jamat. In case of any concern please raise a concer or directly connect with me at email id the geiven below.',
+              'All the informations are taken from proved islmic books followed by Ahle Sunnat wal Jamat. In case of any concern please raise a concer or directly connect with me at email id the geiven below.',
+              style: TextStyle(fontSize: 16),
             ),
             SizedBox(height: 10),
             Text(
