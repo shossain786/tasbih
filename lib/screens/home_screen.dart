@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:tasbih/appdrawer.dart';
 import 'package:tasbih/counter_items.dart';
@@ -6,11 +9,43 @@ import 'package:tasbih/screens/durud_sharif.dart';
 import 'package:tasbih/screens/shab_e_berat.dart';
 import 'package:tasbih/utils/library_utils.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  List<Map<String, dynamic>> items = [];
+
+  @override
+  void initState() {
+    super.initState();
+    loadItems();
+  }
+
+  void loadItems() async {
+    String data = await DefaultAssetBundle.of(context)
+        .loadString('assets/json_files/maqsus_hadis.json');
+    final decodedData = json.decode(data);
+    if (decodedData is List) {
+      setState(() {
+        items = decodedData.cast<Map<String, dynamic>>();
+      });
+    }
+  }
+
+  Map<String, dynamic> getRandomItem() {
+    if (items.isEmpty) return {};
+    Random random = Random();
+    return items[random.nextInt(items.length)];
+  }
+
+  @override
   Widget build(BuildContext context) {
+    Map<String, dynamic> item = getRandomItem();
+
     return Scaffold(
       appBar: myCustomAppBar(context, 'Tasbih', 'APP'),
       drawer: const MyAppDrawer(),
@@ -23,24 +58,57 @@ class HomePage extends StatelessWidget {
                 'assets/madina_pic.png',
                 width: double.infinity,
               ),
-              const SizedBox(height: 20),
-              const Card(
+              const SizedBox(height: 4),
+              Card(
                 shadowColor: Colors.blue,
                 elevation: 3.0,
-                shape: RoundedRectangleBorder(
+                shape: const RoundedRectangleBorder(
                   side: BorderSide(color: Colors.blue),
                   borderRadius:
                       BorderRadiusDirectional.all(Radius.circular(10)),
                 ),
-                child: ListTile(
-                  title: Text(
-                    'Hadise Paak: Jo mujh par durud padhna bhul gaya woh jannat ki rah bhul gaya!',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          item['title'] ?? '',
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        Visibility(
+                          visible: item['subtitle'].toString().isNotEmpty,
+                          child: const SizedBox(height: 10),
+                        ),
+                        Visibility(
+                          visible: item['subtitle'].toString().isNotEmpty,
+                          child: Text(
+                            item['subtitle'] ?? '',
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w300,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 5),
+                        Visibility(
+                          visible: item['hawala'].toString().isNotEmpty,
+                          child: Text(
+                            item['hawala'] ?? '',
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  subtitle: Text(
-                      'صلی اللہ علیہ والہ وسلم(Swallellaho alayhi wa aalihi wa sallam)'),
                 ),
               ),
               const SizedBox(height: 4),
@@ -67,9 +135,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 1,
-              ),
+              const SizedBox(height: 1),
               Padding(
                 padding: const EdgeInsets.only(left: 2.0, right: 2.0),
                 child: Card(
