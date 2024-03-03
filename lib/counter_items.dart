@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -203,7 +205,7 @@ class _CounterHomeState extends State<CounterHome> {
                     Map<String, dynamic> itemMap = json.decode(item);
                     return itemMap;
                   } catch (e) {
-                    print("Error decoding item: $e");
+                    debugPrint("Error decoding item: $e");
                     return null;
                   }
                 },
@@ -213,7 +215,7 @@ class _CounterHomeState extends State<CounterHome> {
         },
       );
     } catch (e) {
-      print("Error loading items: $e");
+      debugPrint("Error loading items: $e");
     }
   }
 
