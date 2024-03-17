@@ -151,8 +151,8 @@ class _DuaScreenState extends State<DuaScreen> {
                       ),
                     ),
                     title: Text(
-                      groupedDuas[category]![index].name.length > 25
-                          ? '${groupedDuas[category]![index].name.substring(0, 22)}...'
+                      groupedDuas[category]![index].name.length > 33
+                          ? '${groupedDuas[category]![index].name.substring(0, 30)}...'
                           : groupedDuas[category]![index].name,
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,

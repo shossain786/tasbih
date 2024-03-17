@@ -1,0 +1,57 @@
+{
+    "items" :[
+        {
+            "topic": "Taharat",
+            "sawal": "Ghusal kab farz hoti hai",
+            "jawab": "Jawab1",
+            "hawala": "hawala"
+        }, {
+            "topic": "Faraiz",
+            "sawal": "Namaz me kitne faraiz hai?",
+            "jawab": "Namaz me 7 faraiz hai.",
+            "hawala": "hawala"
+        },
+        {
+            "topic": "Makruhat",
+            "sawal": "Manaz me dihar udher dekhna kia hai",
+            "jawab": "Makruh hai",
+            "hawala": "jawab"
+        },
+        {
+            "topic": "Fasid",
+            "sawal": "Kin chizon se namaz tut jati hai",
+            "jawab": "Jawab1",
+            "hawala": "hawala"
+        },
+        {
+            "topic": "Fazilat",
+            "sawal": "fazilat 1",
+            "jawab": "hadis",
+            "hawala": "hawala"
+        },
+        {
+            "topic": "Qaza Namaz",
+            "sawal": "Umar bhar ki qaza kaise ada kare",
+            "jawab": "Jawab1",
+            "hawala": "hawala"
+        },
+        {
+            "topic": "Bimar ki Namaz",
+            "sawal": "Bimari ki surat me namaz kaise padhe?",
+            "jawab": "Jawab1",
+            "hawala": "hawala"
+        },
+        {
+            "topic": "Sajda Sahu",
+            "sawal": "Sajda Sahu kise kahte hai?",
+            "jawab": "Jawab1",
+            "hawala": "hawala"
+        },
+        {
+            "topic": "Sajdah Tilawat",
+            "sawal": "Sajdah Tilawat kise kahte hai",
+            "jawab": "Jawab1",
+            "hawala": "hawala"
+        }
+    ]
+}

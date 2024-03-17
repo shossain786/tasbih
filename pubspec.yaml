@@ -88,6 +88,7 @@ flutter:
     - assets/json_files/dua.json
     - assets/json_files/shabebarat.json
     - assets/json_files/maqsus_hadis.json
+    - assets/json_files/namaaz.json
     - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see

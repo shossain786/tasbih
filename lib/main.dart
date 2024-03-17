@@ -3,6 +3,7 @@ import 'package:tasbih/about_us.dart';
 import 'package:tasbih/counter_items.dart';
 import 'package:tasbih/screens/coming_soon.dart';
 import 'package:tasbih/screens/dua1.dart';
+import 'package:tasbih/screens/namaz_screen.dart';
 import 'package:tasbih/screens/shab_e_berat.dart';
 
 import 'screens/home_screen.dart';
@@ -29,7 +30,7 @@ class TasbihAPP extends StatelessWidget {
         '/aboutus': (context) => const AboutUsPage(),
         '/shabebarat': (context) => const ShabeBaraatScreen(),
         '/adab': (context) => const ComingSoonPage(),
-        '/namaz': (context) => const ComingSoonPage(),
+        '/namaz': (context) => const NamaazScreen(),
         '/fatiha': (context) => const ComingSoonPage(),
       },
     );
