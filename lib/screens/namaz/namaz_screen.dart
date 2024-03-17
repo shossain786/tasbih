@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tasbih/model/namaaz.dart';
+import 'package:tasbih/screens/namaz/namaz_details.dart';
+import 'package:tasbih/utils/library_utils.dart';
 
 class NamaazScreen extends StatefulWidget {
   const NamaazScreen({super.key});
@@ -40,9 +42,8 @@ class _NamaazScreenState extends State<NamaazScreen> {
     for (var namaaz in namaazs) {
       if (!groupedNamazs.containsKey(namaaz.topic)) {
         groupedNamazs[namaaz.topic] = [];
-      } else {
-        groupedNamazs[namaaz.topic]!.add(namaaz);
       }
+      groupedNamazs[namaaz.topic]!.add(namaaz);
     }
 
     return DefaultTabController(
@@ -89,6 +90,53 @@ class _NamaazScreenState extends State<NamaazScreen> {
               },
             ).toList(),
           ),
+        ),
+        body: TabBarView(
+          children: groupedNamazs.keys.map((topic) {
+            return ListView.builder(
+              itemCount: groupedNamazs[topic]!.length,
+              itemBuilder: (context, index) {
+                return Card(
+                  margin: const EdgeInsets.all(2.0),
+                  elevation: 4.0,
+                  color: (index % 2 == 1)
+                      ? MyColors().cardIconColor()
+                      : MyColors().btnTextColor(),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: Icon(
+                        Icons.star,
+                        color: MyColors().appBarIconsColor(),
+                      ),
+                    ),
+                    title: Text(
+                      groupedNamazs[topic]![index].sawal,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        fontSize: 20,
+                      ),
+                    ),
+                    onTap: () {
+                      debugPrint('Card has been pressed');
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => NamaazDetails(
+                              namaaz: groupedNamazs[topic]![index],
+                            ),
+                          ));
+                    },
+                    trailing: const Icon(
+                      Icons.arrow_right,
+                      color: Colors.white,
+                    ),
+                  ),
+                );
+              },
+            );
+          }).toList(),
         ),
       ),
     );
