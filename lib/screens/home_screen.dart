@@ -6,7 +6,7 @@ import 'package:tasbih/appdrawer.dart';
 import 'package:tasbih/counter_items.dart';
 import 'package:tasbih/screens/dua1.dart';
 import 'package:tasbih/screens/durud_sharif.dart';
-import 'package:tasbih/screens/shab_e_berat.dart';
+// import 'package:tasbih/screens/shab_e_berat.dart';
 import 'package:tasbih/utils/library_utils.dart';
 
 class HomePage extends StatefulWidget {
@@ -224,27 +224,27 @@ class _HomePageState extends State<HomePage> {
                                 child: const Text('Duain'),
                               ),
                               const Padding(padding: EdgeInsets.only(left: 10)),
-                              ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          const ShabeBaraatScreen(),
-                                    ),
-                                  );
-                                },
-                                style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStateProperty.all(Colors.orange),
-                                  elevation: const MaterialStatePropertyAll(4),
-                                  shadowColor:
-                                      MaterialStateProperty.all(Colors.blue),
-                                  foregroundColor:
-                                      MaterialStateProperty.all(Colors.black),
-                                ),
-                                child: const Text('Shab E Barat'),
-                              ),
+                              // ElevatedButton(
+                              //   onPressed: () {
+                              //     Navigator.push(
+                              //       context,
+                              //       MaterialPageRoute(
+                              //         builder: (context) =>
+                              //             const ShabeBaraatScreen(),
+                              //       ),
+                              //     );
+                              //   },
+                              //   style: ButtonStyle(
+                              //     backgroundColor:
+                              //         MaterialStateProperty.all(Colors.orange),
+                              //     elevation: const MaterialStatePropertyAll(4),
+                              //     shadowColor:
+                              //         MaterialStateProperty.all(Colors.blue),
+                              //     foregroundColor:
+                              //         MaterialStateProperty.all(Colors.black),
+                              //   ),
+                              //   child: const Text('Shab E Barat'),
+                              // ),
                             ],
                           ),
                         ),
