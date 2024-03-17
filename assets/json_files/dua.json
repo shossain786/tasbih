@@ -145,7 +145,7 @@
       "category": "Daily",
       "subtitle":"اَلْحَمْدُ لِلّٰہِ الَّذِیْ اَذْھَبَ عَنِّی الْاَذٰی وَعَافَانِیْ",
       "details": "اَلْحَمْدُ لِلّٰہِ الَّذِیْ اَذْھَبَ عَنِّی الْاَذٰی وَعَافَانِیْ",
-      "tarjumah": "شکر ہے اس اللہ کا جس نے مجھ سے گندگی دور کردی اور مجھ کوعافیت دی[Shukar hai us Allah ka jis ne mujh se gandhagi dur kar di aur mujh ko afiyat(chain-sukun) di]",
+      "tarjumah": "شکر ہے اس اللہ کا جس نے مجھ سے گندگی دور کردی اور مجھ کوعافیت دی[Shukar hai us Allah(عزوجل) ka jis ne mujh se gandhagi dur kar di aur mujh ko afiyat(chain-sukun) di]",
       "ahadees": "",
       "hawala": ""
     },
@@ -163,17 +163,6 @@
     {
       "id": "p3",
       "name": "Wuzu ki baad ki dua",
-      "category": "Daily",
-      "subtitle": "",
-      "details": "",
-      "tarjumah": "",
-      "ahadees": "",
-      "hawala": "",
-      "adab": ""
-    },
-    {
-      "id": "p3",
-      "name": "Kapda pahenneki dua",
       "category": "Daily",
       "subtitle": "",
       "details": "",
@@ -222,7 +211,7 @@
       "category": "Daily",
       "subtitle": "اَللّٰهُمَّ افْتَحْ لِى اَبْوَابَ رَحْمَتِكَ",
       "details": "اَللّٰهُمَّ افْتَحْ لِى اَبْوَابَ رَحْمَتِكَ\n ya ye padhe: \nاَللّٰهُمَّ افْتَحْ لِى اَبْوَابَ رَحْمَتِكَ وَ سَهِّلْ لَنَا اَبْوَابَ رِزْقِكَ",
-      "tarjumah": "اے اللہ میرے لیے اپنی رحمت کے دروازے کھول دے\nاے اللہ میرے لیے اپنی رحمت کے دروازے کھول دے اور ہمارے لیے رزق کے دروازے آسان کر دے",
+      "tarjumah": "اے اللہ میرے لیے اپنی رحمت کے دروازے کھول دے\n Ye Allah(عزوجل) mere lie apni rahmat ke darwaze khol deاے اللہ میرے لیے اپنی رحمت کے دروازے کھول دے اور ہمارے لیے رزق کے دروازے آسان کر دے\n Ye Allah(عزوجل) mere lie apni rahmat ke darwaze khol de aur hamaare lie jizq ke darwaze aasaan karde.",
       "ahadees": "",
       "hawala": "",
       "adab": "Masjid me dakhil hote waqt pahle dahna pair dakhil kare"
@@ -233,7 +222,7 @@
       "category": "Daily",
       "subtitle": "اَللّٰهُمَّ اِنِّىْ اَسْءَلُكَ مِنْ فَضْلِكَ وَ رَحْمَتِكَ",
       "details": "اَللّٰهُمَّ اِنِّىْ اَسْءَلُكَ مِنْ فَضْلِكَ وَ رَحْمَتِكَ",
-      "tarjumah": "اے اللہ میی تجھسے تیرے فضل و رحمت کا سوال کرتا ہوں",
+      "tarjumah": "اے اللہ میی تجھسے تیرے فضل و رحمت کا سوال کرتا ہوں\n Ye Allah(عزوجل) mei tujhse teri fazl wo rahmat kaa suwal kartaa hun.",
       "ahadees": "",
       "hawala": "",
       "adab": "Masjid me nikalte waqt pahle baien pair bahar kare"
@@ -244,7 +233,7 @@
       "category": "Daily",
       "subtitle": "اَللّٰهُمَّ اَنْتَ حَسَّنْتُ خَلْقِى فَحَسِّنْ خُلُقِى",
       "details": "اَللّٰهُمَّ اَنْتَ حَسَّنْتُ خَلْقِى فَحَسِّنْ خُلُقِى",
-      "tarjumah": "اے اللہ تو نے میری صورت اچھی بنائ ہے تو میرا اخلاق بھی اچھا بنا دے\n Ye Allah tu ne meri surat achhi banayi hai mera akhlaq bhi achha banaa de.",
+      "tarjumah": "اے اللہ تو نے میری صورت اچھی بنائ ہے تو میرا اخلاق بھی اچھا بنا دے\n Ye Allah(عزوجل) tu ne meri surat achhi banayi hai mera akhlaq bhi achha banaa de.",
       "ahadees": "",
       "hawala": "",
       "adab": ""
@@ -321,7 +310,7 @@
       "category": "Mulaqat",
       "subtitle": "يَغْفِرُ اللهُ لَنَا وَ لَكُمْ",
       "details": "يَغْفِرُ اللهُ لَنَا وَ لَكُمْ",
-      "tarjumah": "اللہ تعالٰی ہمارے اور تمھاری مغفرت فرماۓ\nAllah  ta'ala hamare aur tumhare mghfirat farmaye",
+      "tarjumah": "اللہ تعالٰی ہمارے اور تمھاری مغفرت فرماۓ\nAllah(عزوجل)  ta'ala hamare aur tumhare mghfirat farmaye",
       "ahadees": "",
       "hawala": "",
       "adab": ""

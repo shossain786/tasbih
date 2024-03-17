@@ -37,7 +37,8 @@ class DuaDetailsScreen extends StatelessWidget {
                         thickness: 2.0,
                       ),
                       Text(
-                        dua.subtitle,
+                        dua.details,
+                        textAlign: TextAlign.right,
                         style: const TextStyle(
                           fontSize: 34.0,
                           fontWeight: FontWeight.bold,
@@ -56,7 +57,7 @@ class DuaDetailsScreen extends StatelessWidget {
                               'Tarjuma:',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                fontSize: 16,
+                                fontSize: 20,
                               ),
                             ),
                           ),
@@ -64,7 +65,7 @@ class DuaDetailsScreen extends StatelessWidget {
                       ),
                       Text(
                         dua.tarjumah,
-                        style: const TextStyle(fontSize: 16.0),
+                        style: const TextStyle(fontSize: 20.0),
                       ),
                       const Divider(
                         color: Colors.orange,
