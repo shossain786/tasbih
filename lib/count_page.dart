@@ -21,6 +21,7 @@ class CountPage extends StatefulWidget {
 class _CountPageState extends State<CountPage> {
   int count = 0;
   int targetCount = 0;
+  int totalCount = 0;
   static const int totalDots = 100;
 
   late bool _canVibrate = true;
@@ -84,7 +85,7 @@ class _CountPageState extends State<CountPage> {
           _incrementCount();
           if (count == targetCount) {
             if (_canVibrate) {
-              Vibrate.feedback(FeedbackType.error);
+              Vibrate.feedback(FeedbackType.impact);
             }
             _showContinuePrompt();
           }
@@ -118,6 +119,7 @@ class _CountPageState extends State<CountPage> {
                           ),
                         ],
                       ),
+                      // Text('$totalCount'),
                     ],
                   ),
                 ],
@@ -140,6 +142,7 @@ class _CountPageState extends State<CountPage> {
   void _incrementCount() {
     setState(() {
       count++;
+      totalCount++;
       _saveCount();
       if (count == targetCount) {
         _showContinuePrompt();
@@ -271,6 +274,7 @@ class _CountPageState extends State<CountPage> {
     setState(
       () {
         count = prefs.getInt('${widget.itemName}_count') ?? 0;
+        totalCount = prefs.getInt('${widget.itemName}_totalCount') ?? 0;
         String targetKey = '${widget.itemName}_targetCount';
 
         Map<String, dynamic>? targetMap;
@@ -290,6 +294,7 @@ class _CountPageState extends State<CountPage> {
     final prefs = await SharedPreferences.getInstance();
     prefs.setInt('${widget.itemName}_count', count);
     prefs.setInt('${widget.itemName}_targetCount', targetCount);
+    prefs.setInt('${widget.itemName}_totalCount', totalCount);
     debugPrint(prefs.getKeys().toString());
     debugPrint('${prefs.get('Allahu_count')}');
   }

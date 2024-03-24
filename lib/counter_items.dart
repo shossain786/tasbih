@@ -52,6 +52,7 @@ class _CounterHomeState extends State<CounterHome> {
                     items[index]?['${items[index]?['text']}_targetCount'];
                 int currentCount = items[index]?['count'] ?? 0;
                 int remainingCount = targetCount - currentCount;
+                int totalCount = items[index]?['totalCount'] ?? 0;
                 debugPrint(items.toString());
                 return Column(
                   children: [
@@ -79,21 +80,33 @@ class _CounterHomeState extends State<CounterHome> {
                         ),
                         subtitle: Container(
                           decoration: const BoxDecoration(
-                              border: Border(left: BorderSide(width: 1))),
+                              border: Border(
+                                  left: BorderSide(width: 1),
+                                  right: BorderSide(width: 1))),
                           child: Padding(
-                            padding: const EdgeInsets.only(left: 5),
+                            padding: const EdgeInsets.only(left: 5, right: 5),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'Remaining Count: $remainingCount',
-                                  style: const TextStyle(
-                                    fontWeight: FontWeight.w700,
-                                  ),
+                                Row(
+                                  children: [
+                                    Text(
+                                      'Remaining: $remainingCount',
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                    const Expanded(child: SizedBox()),
+                                    Text(
+                                      'Total Recited: $totalCount',
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                  ],
                                 ),
                                 const SizedBox(height: 2),
                                 Text(
-                                  'Target Count: $targetCount',
+                                  'Target: $targetCount',
                                   style: const TextStyle(
                                       fontWeight: FontWeight.w700),
                                 ),
@@ -233,6 +246,7 @@ class _CounterHomeState extends State<CounterHome> {
       items = dataList.map((item) {
         Map<String, dynamic> newItem = Map<String, dynamic>.from(item);
         newItem['count'] = prefs.getInt('${item['text']}_count') ?? 0;
+        newItem['totalCount'] = prefs.getInt('${item['text']}_totalCount') ?? 0;
         return newItem;
       }).toList();
     });
