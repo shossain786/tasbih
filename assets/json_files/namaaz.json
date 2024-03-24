@@ -1,11 +1,42 @@
 {
     "items" :[
         {
-            "topic": "Taharat",
-            "sawal": "Ghusal kab farz hoti hai",
-            "jawab": "Jawab1",
-            "hawala": "hawala"
-        }, {
+            "topic": "Ghusal",
+            "sawal": "Kin surton mei ghusal karna farz hai?",
+            "jawab": "\t1. Mani ka apni jagah se shohobat ke sath juda ho kar aaza(sharm gah) se nikalna. \n\t2. Ehtelaam \n\t3. Hashfah yaani sar zakar(sharam gah) ka aurat ke aage ya piche ya mard ke piche dakhil hona dono par ghusal farz karta hai. \n\t4. Haiz se faarig hona. \n\t5. Nifaas ka khatam hona.",
+            "hawala": "انوار شريعت"
+        },
+        {
+            "topic": "Ghusal",
+            "sawal": "Ghusal mei kinti baatei farz hai?",
+            "jawab": "Ghusal me tin baatei farz hai- \n\t\t1. Kulli karna. \n\t\t2. Naak me paani dalna. \n\t 3. Tamaam Zahiri badan par sar se paaon tak paani bahana",
+            "hawala": "انوار شريعت, درمختار، ج:۱"
+        },
+        {
+            "topic": "Ghusal",
+            "sawal": "Ghusal karne ka Triqah kia hai?",
+            "jawab": "Ghusal karne ka Tariqah yeh hai ki pahle ghusal ki niyyat kar ke dono haat gatto tak tin baar dhoe. Fir istinja ki jagah dhoe. Uss ke baad badan par agar kahi najasat haqiqi yaani peshab ya pakhana wageirah ho to use dur kare. Fir namaaz jaisa wuzu kare magar paon na dhoe. Haan agar chauki(chair) ya patthar wageirah unchi cheez par nahaye to paaon bhi dho le. \n Iss ke baad badan par tel(oil) ki tarah paani chadhaye. Fir tin baar daine kandhe(right shoulder) paani bahaye, aur fir tin bar baayen kandhe(left shoulder) par, fir sar par. \n Aur tamaam badan par tin baar paani bahaye. Tamaam badan par hath phere aur mal-le(rubbing). Phir nahane ke baad fauran kapdhe pahenle.",
+            "hawala": "فتاویٰ عالمگيری,انوار شريعت"
+        }, 
+        {
+            "topic": "Ghusal",
+            "sawal": "Ghusal mei kitni baatei sunnat hai?",
+            "jawab": "Ghusal mei ye baatei sunnat hai: \n 1: Ghusal ki niyyat karna, \n2: Dono hathon ko gatto tak tin baar dhona. \n3: Istinja ki jagah dhona. \n4: Badan par jahan kahi najaasat ho use dur karna. \n5: Namaaz jaisa wuzu karna, \n6: Badan par teil ki tarah paani chadhana. \n7: Daine maudhe fir baaien maudhe fir sar par aur tamaam badan par tin baar paani bahana. \n8: Tamaam badan par haath pherna aur meilna(rubbing) \n9: Nahane me qiblah rukh na hona. Aur kapdha pahan kar nahata ho to koi harj nahi. \n10: Aisi jagah nahana ki koi na dekhe. \n11: nahate waqat kisi qisam ka kalam na ka karna. \n12: Koi dua na padhna. \n13: Auraton ko baith kar nahana. \n14: Nahane k baad fauran kapdha pahen lena.",
+            "hawala": "فتاویٰ عالمگيری,انوار شريعت"
+        },
+        {
+            "topic": "Ghusal",
+            "sawal": "Kin waqton me ghusal karna sunnat hai?",
+            "jawab": "Juma, Eid, Baqara eid, Aarafa ke din, aur ahraam bandhte waqt",
+            "hawala": "فتاویٰ عالمگيری,انوار شريعت"
+        },
+        {
+            "topic": "Ghusal",
+            "sawal": "Kin Surton me ghusal karna mustahab hai?",
+            "jawab": "Waquf e aarafa, Waquf e muzdalfa, Hazir e haram, Hazir e sarkare do aalam (صلی اللہ تعالی علیہ وسلم), Tawaf, dakhil e Mina tino jamron par kankaria marne ke lie. Shab e barat, Shab e qadar, aarafah ki raat, Majlis e milaad sharif, aur digar majlis khair ki haŻiri ke lie, Murdah nahlane ke baad, Majnun ko junun jane ke baad, ghashi se afaqah ke baad, nasha jaate rahne ke baad, gunahon se tauba karne ke lie, naya kapdha pahenne ke lie, safar se wapis ke baad, istehaza bandh hone ke baad, namaaz kasuf khusuf, istasqa, khauf, taariki aur sakht andhi ke lie, badan par najasat lagi ho aur ye na malum ho ki kis jagah hai.\n - In sab surton me ghusal karna mustahab hai.\n\t. NB: 1. Ghutna khol kar logon ke saamne nahaana sakht gunah aur haraam hai. \n\t2. Najis kapdha pahenkar ghusal na kare. Aur agar dusra paak kapdha na ho to usiko paak karle.",
+            "hawala": "انوار شريعت"
+        },
+        {
             "topic": "Faraiz",
             "sawal": "Namaz me kitne faraiz hai?",
             "jawab": "Namaz me 7 faraiz hai.",
