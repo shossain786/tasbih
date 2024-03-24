@@ -8,6 +8,7 @@ import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'package:flutter_vibrate/flutter_vibrate.dart';
+import 'package:vibration/vibration.dart';
 
 class CountPage extends StatefulWidget {
   final String itemName;
@@ -85,7 +86,7 @@ class _CountPageState extends State<CountPage> {
           _incrementCount();
           if (count == targetCount) {
             if (_canVibrate) {
-              Vibrate.feedback(FeedbackType.impact);
+              Vibration.vibrate(duration: 1400, amplitude: 256);
             }
             _showContinuePrompt();
           }
