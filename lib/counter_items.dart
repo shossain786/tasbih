@@ -8,6 +8,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tasbih/count_page.dart';
 import 'package:tasbih/utils/library_utils.dart';
 
+var myBlueColor = Colors.blue;
+
 class CounterHome extends StatefulWidget {
   const CounterHome({super.key});
 
@@ -33,7 +35,7 @@ class _CounterHomeState extends State<CounterHome> {
           _addItems();
         },
         backgroundColor: Colors.orange,
-        splashColor: Colors.blue,
+        splashColor: myBlueColor,
         child: const Icon(
           Icons.add,
           color: Colors.red,
@@ -46,6 +48,11 @@ class _CounterHomeState extends State<CounterHome> {
             child: ListView.builder(
               itemCount: items.length,
               itemBuilder: (context, index) {
+                int targetCount =
+                    items[index]?['${items[index]?['text']}_targetCount'];
+                int currentCount = items[index]?['count'] ?? 0;
+                int remainingCount = targetCount - currentCount;
+                debugPrint(items.toString());
                 return Column(
                   children: [
                     Container(
@@ -54,9 +61,10 @@ class _CounterHomeState extends State<CounterHome> {
                         color: (index % 2 == 1)
                             ? Colors.orangeAccent
                             : Colors.white,
-                        border: Border.all(width: 3, color: Colors.blue),
+                        border: Border.all(width: 3, color: myBlueColor),
                       ),
                       child: ListTile(
+                        dense: true,
                         leading: Icon(
                           FlutterIslamicIcons.solidTasbihHand,
                           color: MyColors().barIconsColor(),
@@ -69,8 +77,29 @@ class _CounterHomeState extends State<CounterHome> {
                             fontSize: 22,
                           ),
                         ),
-                        subtitle: Text(
-                          'Target Count: ${items[index]?['${items[index]?['text']}_targetCount']}',
+                        subtitle: Container(
+                          decoration: const BoxDecoration(
+                              border: Border(left: BorderSide(width: 1))),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 5),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Remaining Count: $remainingCount',
+                                  style: const TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                                const SizedBox(height: 2),
+                                Text(
+                                  'Target Count: $targetCount',
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.w700),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                         trailing: IconButton(
                           onPressed: () {
@@ -105,6 +134,8 @@ class _CounterHomeState extends State<CounterHome> {
       MaterialPageRoute(
         builder: (context) => CountPage(itemName: itemName),
       ),
+    ).then(
+      (value) => _loadItems(),
     );
   }
 
@@ -192,31 +223,19 @@ class _CounterHomeState extends State<CounterHome> {
   }
 
   Future<void> _loadItems() async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final itemsList = prefs.getStringList('items') ?? [];
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String>? listData = prefs.getStringList('items');
+    List<dynamic> dataList = jsonDecode(
+      listData.toString(),
+    );
 
-      setState(
-        () {
-          items = itemsList
-              .map(
-                (item) {
-                  try {
-                    Map<String, dynamic> itemMap = json.decode(item);
-                    return itemMap;
-                  } catch (e) {
-                    debugPrint("Error decoding item: $e");
-                    return null;
-                  }
-                },
-              )
-              .where((item) => item != null)
-              .toList();
-        },
-      );
-    } catch (e) {
-      debugPrint("Error loading items: $e");
-    }
+    setState(() {
+      items = dataList.map((item) {
+        Map<String, dynamic> newItem = Map<String, dynamic>.from(item);
+        newItem['count'] = prefs.getInt('${item['text']}_count') ?? 0;
+        return newItem;
+      }).toList();
+    });
   }
 
   Future<void> _saveItems() async {
@@ -242,7 +261,6 @@ class _CounterHomeState extends State<CounterHome> {
             ),
             TextButton(
               onPressed: () async {
-                // Remove the item from the list, save it, and close the dialog
                 setState(() {
                   items.removeAt(index);
                 });

@@ -281,6 +281,7 @@ class _CountPageState extends State<CountPage> {
           }
         }
         targetCount = targetMap![targetKey];
+        debugPrint('Target Count: $targetCount');
       },
     );
   }
@@ -289,6 +290,8 @@ class _CountPageState extends State<CountPage> {
     final prefs = await SharedPreferences.getInstance();
     prefs.setInt('${widget.itemName}_count', count);
     prefs.setInt('${widget.itemName}_targetCount', targetCount);
+    debugPrint(prefs.getKeys().toString());
+    debugPrint('${prefs.get('Allahu_count')}');
   }
 }
 
