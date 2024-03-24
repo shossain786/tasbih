@@ -1,6 +1,48 @@
 {
     "items" :[
         {
+            "topic": "Wuzu",
+            "sawal": "Wuzu karne ka Tariqa kia hai?",
+            "jawab": "Wuzu karne ka Tariqa ye hai ki \n - Pahle bismillahir rahmanir rahim(بسم اللہ الرحمن الرحیم)padhe. \n - Fir miswak kare, miswak na ho to ungli se daant meil le\n - Fir dono haaton ko gatto tak tin baar dhoe. Pahle dahne haath par paani daale fir baaein haath par. dono ko ek sath na dhoe. \n - Fir dahne haath dahne haath se tin baar kulli kare. \n - Fir baaien haath ki choti ungli naak saaf kare. aur dahne haath se tin baar naak me paani chadhae. \n - Fir pura chahra dhoe. yani Peshani par bal ugne ki jagah se thodhi ke niche tak aur ek kaan ki lo se dusre kaan ki lo tak har hisse par tin baar pani bahaye. \n - Iss ke baad dono haath kauhnion samet tin baar dhoe. Unglion ki taraf se kauhnion ke upar tak paani dale. Kahnion ki taraf se na dale.\n - Fir ek baar dono haath se pure sar ka masah kare fir kaano ka aur gardan ka ek ek baar masah kare.\n - Fir dono paaon takhno samet tin baar dhoe.",
+            "hawala": "انوار شريعت, درمختار، ج:۱"
+        },
+        {
+            "topic": "Wuzu",
+            "sawal": "Dhone ka matlab kya hai?",
+            "jawab": "Dhone ka matlab ye hai ki jis cheez dhoe uss ke har hisse par paani bah jaaye.",
+            "hawala": "فتاویٰ عالمگيری,انوار شريعت"
+        },
+        {
+            "topic": "Wuzu",
+            "sawal": "Agar kuch hissa bhig gaya magar uss par paani nahi baha to wuzu hoga ya nahi?",
+            "jawab": "Iss tarah wuzu hargiz na hoga, bhigne ke sath har hisse par paani bah jana zaruri hai.",
+            "hawala":"انوار شريعت"
+        },
+        {
+            "topic": "Wuzu",
+            "sawal": "Wuzu me kitne chize farz hai?",
+            "jawab": "Wuzu me char(four) cheeze farz hai. \n\t\t 1. Awwal munh dhona yaani baal nikalne ki jagah se thodi ke niche tak aur ek kaan ke lo se dusre kaan ke lo tak. \n\t\t 2. Kauhnia samet dono haath dhona. \n\t\t 3. Chauthayi(1/4 hissa) sar masah karna, yaani bhiga hua haath ferna. \n\t\t 4. Dono paaon takhno samet dhona",
+            "hawala":"انوار شريعت"
+        },
+        {
+            "topic": "Wuzu",
+            "sawal": "Wuzu me kitne sunnate hai?",
+            "jawab": "Wuzu me sunnate 16 hai. \n\t\t 1. Niyyat karna \n\t\t 2. Bismillahir rahmanir rahim(بسم اللہ الرحمن الرحیم) se suru karna \n\t\t 3. Dono haatho ko gatto tak tin baar dhona,  \n\t\t 4. Miswak karna \n\t\t 5. Dahne haat se tin bar kullian karna \n\t\t 6. Dahne haath ne tin baar naak me paani chadhana. \n\t\t 7. Baaien haath se naak saf karna \n\t\t 8. Daardhi ka khilal karna \n\t\t 9. Haath paaon ki unglion ka khilal karna \n\t\t 10. Har aaza ko tin baar dhona \n\t\t 11. Pura sar ka ek baar masah karna \n\t\t 12. Kaanon ka masah karna. \n\t\t 13. Tartib se wuzu karna \n\t\t 14. Dadhi ke jo baal munh ke daire ke niche hai un ka masah karna  \n\t\t 15. Aaza ko pe dar pe dhona  \n\t\t 16. Har makruhaat se bachna",
+            "hawala":"انوار شريعت"
+        },
+        {
+            "topic": "Wuzu",
+            "sawal": "Wuzu me kitni baate makruh hai?",
+            "jawab": "Wuzu me 21 baatei makruh hai: \n\t\t 1. Aurat ke ghusal ya wuzu ke bache hue paani se wuzu karna. \n\t\t 2. Wuzu ke lie najis jagah baithna.\n\t\t 3. Najis jagah wuzu ke paani girana. \n\t\t 4. Masjid ke andar wuzu karna. \n\t\t 5. Wuzu ke aaza se bartan me paani ke qatre tapkana \n\t\t 6. Paani me rainth ya khankar dalna. \n\t\t 7. Qiblah ki taraf thuk ya khankar dalna ya kulli karna \n\t\t 8. Be zarurat dunia ki baat karna. \n\t\t 9. Zarurat se jyada paani kharch karna. \n\t\t 10. Paani iss qadar kam kharch ki sunnat ada na ho. \n\t\t 11. Munh par paani marna. \n\t\t 12. Munh par paani dalte waqat phunkna. \n\t\t 13. Sirf ek haath se munh dhona. \n\t\t 14. Gale ka masah karna. \n\t\t 15. Baaein haath se kulli karna ya naak me paani dalna. \n\t\t 16. Dahne haath se naak saf karna. \n\t\t 17. Apne lie koi lota wageirah khas kar lena. \n\t\t 18. Tin naye paani se tin baar sar ka masah karna. \n\t\t 19. Jis kapdhe se istinja ka paani khusk kia ho usse aazaye wuzu pochna. \n\t\t 20. Dhup ke garam paani se wuzu karna. \n\t\t 21. Kisi sunnat ko chhodh dena.",
+            "hawala": "بہار شريعت,انوار شريعت"
+        },
+        {
+            "topic": "Wuzu",
+            "sawal": "Kin Cheezon se wuzu tut jata hai?",
+            "jawab": "Jin baaton se wuzu tut jata hai wo ye hai: \n\t\t - Pakhana ya peshab karna. \n\t\t - Pakhana peshab ki raste se kisi aur cheez ka nikalna. \n\t\t - Pakhane ke raste se hawa ka nikalna. \n\t\t - Badan ke kisi maqam se khun ya peep nikal kar aisi jagah bahna ki jis ka wuzu ya gusal me dhona farz hai. \n\t\t - Khana, pani ya safara ki munh bhar qay ana. \n\t\t - Iss tarah so jana ki jisam ke jodh dhile padh jaye. \n\t\t - Behosh hona. \n\t\t - Junun hona. \n\t\t - Ghashi hona. \n\t\t - Kisi cheez ka itna nasha hona ki chlne me paon ladkhadae. \n\t\t - Ruku aur sajdah wali namaz mei itni zor se hansna ki aas paas wale sune. \n\t\t - Dukhti aankh se aansu bahna.",
+            "hawala":"انوار شريعت"
+        },
+        {
             "topic": "Ghusal",
             "sawal": "Kin surton mei ghusal karna farz hai?",
             "jawab": "\t1. Mani ka apni jagah se shohobat ke sath juda ho kar aaza(sharm gah) se nikalna. \n\t2. Ehtelaam \n\t3. Hashfah yaani sar zakar(sharam gah) ka aurat ke aage ya piche ya mard ke piche dakhil hona dono par ghusal farz karta hai. \n\t4. Haiz se faarig hona. \n\t5. Nifaas ka khatam hona.",

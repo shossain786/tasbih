@@ -52,7 +52,7 @@ class NamaazDetails extends StatelessWidget {
                       namaaz.jawab,
                       textAlign: TextAlign.left,
                       style: const TextStyle(
-                        fontSize: 28.0,
+                        fontSize: 24.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.deepOrange,
                       ),
