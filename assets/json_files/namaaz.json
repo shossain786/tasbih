@@ -79,52 +79,100 @@
             "hawala": "انوار شريعت"
         },
         {
+            "topic": "Sharait",
+            "sawal": "Namaaz ki sharait kitni hai?",
+            "jawab": "Namaaz ki sharait 6 hai, jin ke baghair namaaz suru hoti hi nahi. Aur wo ye hai:\n\t\t 1. Taharat\n\t\t 2. Satre Aurat\n\t\t 3. Isteqbaal e Qibla\n\t\t 4. Waqat\n\t\t 5. Niyyat\n\t\t 6. Takbir e tahrima\n\n\t\t 1. Taharat- Yani namaazi ke badan, kapdhe aur uss jagah ka paak hona chahie jis par namaaz padhe.\n\t\t 2. Satre aurat- Yani mard ko naaf se ghutne tak chhupana aur aurat ko siwa chahra, hathli aur qadam ke pura badan chhupana. Aurat agar itna baarik dopatta odh kar namaaz padhe ki jis se baal ki siyahi chamke to namaaz na hogi, jab tak ki uss par koi aisi cheez na odhe ki jis se baal ka rang chhup jaye.\n\t\t 3. Isteqbaal e Qibla- Yani namaaz me qibla ki taraf munh karna, agar qibla ki simat me shubah ho to kisi se daryaft kare. Agar koi dusra maujud na ho to ghaur o fikar ke baad jidhar dil jame usi taraf munh karke namaaz padhle. Fir agar baad namaaz malum hua ki qibla dusri simat tha to koi harz nahi namaaz ho gayi.\n\t\t 4. Waqat- Lihaza waqat se pahle namaaz padhi to na hui. \n\t\t 5. Niyyat- Yaani dil ke pakke iradah ke sath namaaz padhna zaruri hai. Aur zubaan se niyyat ke alfaaz kah lena mustahaab hai. Isme Arabi ki takhsis nahi urdu waghairah me bhi ho sakti hai. Aur yuin kahe -niyyat ki maine... aur niyyat karta hun mai na kahe.\n\t\t 6. Takbir e Tahrima: Yaani namaaz ke suru me Allahu akbar(اللهُ اَكْبَرُ) kahna shart hai.",
+            "hawala": "بہار شريعت,فتاویٰ عالمگيری,انوار شريعت"
+        },
+        {
+            "topic": "Istelaahaat",
+            "sawal": "Farz aur wajib kise kahte hai?",
+            "jawab": "\t\tFarz wo fail(kaam) hai ki isko jaan bujh kar chhodhna Shakht gunah aur jis ibaadat ke andar wo ho baghair uske uss ke wo ibaadat durust na ho. \n\t\tAur wajib wo fail hai ki iss ko jaan bujh kar chodhna gunah aur namaaz me qasdan chhodhne se namaaz ka dobara padhna zaruri aur bhul kar chhut jaye to Sajdah sau lazim hai.",
+            "hawala": "انوار شريعت"
+        },
+        {
+            "topic": "Istelaahaat",
+            "sawal": "Sunnat e Muakkadah aur ghair muakkadah kise kahte hai?",
+            "jawab": "\t\tSunnat e muakkadah woh fail(kaam) hai ki jiska chhodhna bura aur karna sawab hai. Aur Ittefaqan chhodhne par etaab aur chhodhne ki aadat kar lene par mustahiq e azaab. \n\t\tSunnat e Ghair muakkadah woh fail hai ki iss ka karna sawab aur na karna agarche a'datan ho etaab nahi magar sharyan napasand ho.",
+            "hawala": "انوار شريعت"
+        },
+        {
+            "topic": "Istelaahaat",
+            "sawal": "Mustahab aur mubah kise kahte hai?",
+            "jawab": "\t\tMustahab woh fail(kaam) hai jis ka karna sawab aur na karne par kuch gunah nahi. \n\n\t\t Aur Mubah wo fail hai jiska karna na karna barabar hai.",
+            "hawala": "انوار شريعت"
+        },
+        {
+            "topic": "Istelaahaat",
+            "sawal": "Haraam aur makruh e tahrima kise kahte hai?",
+            "jawab": "\n\t\tHaraam wo fail hai ki jis ka ek baar bhi jaan bujh kar karna sakht gunah hai, aur usse bachna farz aur sawab hai. \n\n\t\tAur Makruh e tahrima woh fail hai ki jiske karne se ebaadat naaqis ho jaati hai aur karne wala gunahgar hota hai agarche uska gunah haraam se kam hai.",
+            "hawala": "انوار شريعت"
+        },
+        {
+            "topic": "Istelaahaat",
+            "sawal": "Makruh e tanzihi aur khilaf e ula kise kahte hai?",
+            "jawab": "\n\t\tMakruh e tanzihi woh fail hai ki jiska karna shariy'at ko pasand na ho, aur usse bachna bahtar aur sawab ho. \n\n\t\t Aur khilaaf e ula woh fail hai jis ka na karna behtar aur karne me koi muzaaiqah aur e'taab nahi.",
+            "hawala": "انوار شريعت"
+        },
+        {
             "topic": "Faraiz",
-            "sawal": "Namaz me kitne faraiz hai?",
-            "jawab": "Namaz me 7 faraiz hai.",
-            "hawala": "hawala"
+            "sawal": "Namaz me kitne cheeze faraiz hai?",
+            "jawab": "\nNamaz me 6 cheeze faraiz hai. - \n\t\t - Qyam\n\t\t - Qiraat\n\t\t - Ruku\n\t\t - Sajdah\n\t\t - Qaidah e akhirah\n\t\t - Khuruj e bisun'ihi\n\n[Note: Isme ek baat ghaur karna hai, dusri fiqh ki kataabo me Namaaz ki faraiz 7 bataya jati hai, jisme  Takbir e Tahrima ko bhi Shamil kia jata hai. Bahar hal dono baatei sahi hai.]",
+            "hawala": "انوار شريعت"
         },
         {
-            "topic": "Makruhat",
-            "sawal": "Manaz me dihar udher dekhna kia hai",
-            "jawab": "Makruh hai",
-            "hawala": "jawab"
+            "topic": "Faraiz",
+            "sawal": "Qyam farz hai iska kya matlab hai?",
+            "jawab": "\nIska matlab ye hai ki khadhe ho kar namaaz ada karna zaruri hai.To kisi ne baghair uzr baith kar namaaz padhi to na hui. Khawah aurat ho ya mard. Haan nafal namaaz baith kar padhna jaiz hai.",
+            "hawala": "بہار شريعت,انوار شريعت"
         },
         {
-            "topic": "Fasid",
-            "sawal": "Kin chizon se namaz tut jati hai",
-            "jawab": "Jawab1",
-            "hawala": "hawala"
+            "topic": "Faraiz",
+            "sawal": "Qiraat farz hai iska kya matlab hai?",
+            "jawab": "\nIska matlab ye hai ki farz ki do raka'aton mei aur witr, sunnat aur nafl ki har raka'aton mei Quran sharif padhna zaruri hai. To agar kisi ne in me Quraan na padha to namaaz na hogi.",
+            "hawala": "بہار شريعت,انوار شريعت"
         },
         {
-            "topic": "Fazilat",
-            "sawal": "fazilat 1",
-            "jawab": "hadis",
-            "hawala": "hawala"
+            "topic": "Faraiz",
+            "sawal": "Quran majid ahistah padhne ka adni darjah kya hai?",
+            "jawab": "\nAhistah padhne ka adni darjah ye hai ki khud sune agar iss qadar ahistah padha ki khud na suna to namaaz na hogi",
+            "hawala":"بہار شريعت,انوار شريعت"
         },
         {
-            "topic": "Qaza Namaz",
-            "sawal": "Umar bhar ki qaza kaise ada kare",
-            "jawab": "Jawab1",
-            "hawala": "hawala"
+            "topic": "Faraiz",
+            "sawal": "Ruku' ka adna darjah kia hai?",
+            "jawab": "\nRuku' ka adna darjah ye hai haath ghutne tak pahunch jae aur pura ruku' ye hai ki pith sidhi bichha de aur sar pith ke barabar rakhe, uncha nicha na rakhe.\n[Note: Auraton ke lie ruku' ki alag huqum hai. Isko khawatin ki namaaz me dekhe.]",
+            "hawala": "انوار شريعت"
         },
         {
-            "topic": "Bimar ki Namaz",
-            "sawal": "Bimari ki surat me namaz kaise padhe?",
-            "jawab": "Jawab1",
-            "hawala": "hawala"
+            "topic": "Faraiz",
+            "sawal": "Sajdah ki haqiat kya hai?",
+            "jawab": "\nPeshani zamin par jamna sajdah ki haqiqat hai. Aur paon ki ek ungli pa pet zamin se lagna shart hai yaani kam se kam paaon ki ek ungli ko modh kar qibla rokh karna zaruri hai. To agar kisine iss tarah sajdah kia ki dono paaon zamin se uthe rahe to namaaz na hui. Balki sirf ungli ki nok zamin se lagi jabbhi namaaz na hui.",
+            "hawala": "بہار شريعت,انوار شريعت"
         },
         {
-            "topic": "Sajda Sahu",
-            "sawal": "Sajda Sahu kise kahte hai?",
-            "jawab": "Jawab1",
-            "hawala": "hawala"
+            "topic": "Faraiz", 
+            "sawal": "Kitni unglion ka pet zamin se lagna wajib hai?", 
+            "jawab": "\nDono paaon ki tin tin unglion zamin se lagna wajib hai.",
+            "hawala":"انوار شريعت"
         },
         {
-            "topic": "Sajdah Tilawat",
-            "sawal": "Sajdah Tilawat kise kahte hai",
-            "jawab": "Jawab1",
-            "hawala": "hawala"
+            "topic": "Faraiz",
+            "sawal": "Qaidah e akhirah ka kya matlab hai?",
+            "jawab": "\nNamaaz ki rak'ate puri karne ke baad اتّحيّات و رَسُلُهٗ tak padhne ki miqdaar baithna farz hai",
+            "hawala":"انوار شريعت"
+        },
+        {
+            "topic": "Faraiz",
+            "sawal": "Khuruj e bisun'ihi kise kahte hai?",
+            "jawab": "\nQaidah e akhirah ke baad namaaz ko todh dene wala  koi kaam qasdan karne ko khuruj e bisun'ihi kahte hai. Lekin salaam ke elawah koi dusra namaaz ko todh dene wala kaam qasdan paya gaya to namaaz ka dobarah padhna wajib hai.",
+            "hawala": "بہار شريعت,انوار شريعت"
+        },
+        {
+            "topic": "Wajibaat",
+            "sawal": "Namaaz me jo cheeze wajib hai unhe bataye.",
+            "jawab": "\nNamaaz me ye cheezen wajib hai: \n\t\t - Takbir e tahrima me lafze Allhu akbar(اللهُ اَكْبَرُ) ka hona. \n\t\t - Alhamdu padhna \n\t\t - Farz ki do pahli raka'ato me aur sunnat, nafl aur witr ki har rak'at me alhamdu ke sath surat ya tin chhoti aayat milanaa. \n\t\t - Farz namaaz me do pahli rak'aton me qiraat karna.\n\t\t - Alhamdu ka surat se pahle hona \n\t\t - Har rak'at ke surat se pahle ek hi baar alhamdu padhna.\n\t\t - Alhamdu aur surat ke darmiyan kisi ajnabi ka fasil na hona\n\t\t - Qiraat ke baad muttasilan(fauran) ruku' karna.\n\t\t - Sajdah me dono paaon ki tin tin unglion ka peth zamin par lagna.\n\t\t - Dono sajdah ke darmiyan koi rukan fasil na hona.\n\t\t - Ta'dil arkan\n\t\t - Qauma yani ruku' se sidha khadha hona\n\t\t - Jalsah yaani dono sajdah ke darmiyan sidha baithna. \n\t\t  - Qa'dah ula me tashahhud ke baad kuch na pdhna\n\t\t - Har qaidah me pura tashahhud padhna\n\t\t - Lafz assalamu do baar kahna\n\t\t - Witr me dua'e qunut padhna\n\t\t - Takbir e qunut\n\t\t - Eiden ki chhoan(6) takbire\n\t\t - Eiden me dusri rak'at ki takbir e ruku' aur uss takbir ke lie lafz e Allahu akbar hona\n\t\t - Har jahri namaaz me imaaam ko jahr se qiraat karna aur ghair e jahri namaaz me ahistah\n\t\t - Har wajib aur farz ka uski jagah par hona\n\t\t - Ruku' ka har rak'at me ek hi baar hona aur sajda ka do hi baar hona\n\t\t - Dusri se pahli qa'dah na karna aur char rak'at wali namaaz me tisri par qa'dah na hona.\n\t\t - Aayate sajdah padhi to sajdah tilawat karna aur sahu ho to sajdah sahu karna.\n\t\t - Do farz ya do wajib ya wajib farz ke darmiyan tin tasbih ki miqdar waqfa na hona\n\t\t - Imaam jab qiraat kare buland aawaj se khowah aahistah uss waqat muqtadi ka chup rahna aur siwa qiraat ke tamam wajibaat me Imaam ki mutb'at(pairwi/follow) karna.",
+            "hawala": "انوار شريعت"
         }
     ]
 }
