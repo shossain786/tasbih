@@ -1,0 +1,54 @@
+{
+    "tasbih" : [
+      {
+        "name": "Subhaan Allah",
+        "targetCount" : "33",
+        "benifit" : "it has lots of benifits"
+      },
+      {
+        "name": "ya qabiyyu",
+        "targetCount" : "11",
+        "benifit" : "har farz namaaz ke baad 11 bar. Dimag ki majbuti ke lie"
+      },
+      {
+        "name": "Ya muhyi ya mumito",
+        "targetCount" : "7",
+        "benifit" : "protection from black magic"
+      },
+      {
+        "name": "huallahur rahim",
+        "targetCount" : "7",
+        "benifit" : "imaan ki majbuti ke lie"
+      },
+      {
+        "name": "ya wahidu",
+        "targetCount" : "100",
+        "benifit" : "dar se bachne ke lie"
+      },
+      {
+        "name": "ya Bariu",
+        "targetCount" : "10",
+        "benifit" : "for baby boy"
+      },
+      {
+        "name": "Ya Qahharu",
+        "targetCount" : "100",
+        "benifit" : "Removal of troubles"
+      },
+      {
+        "name": "Ya maliku",
+        "targetCount" : "90",
+        "benifit" : "Getting Rid of Proverty"
+      },
+      {
+        "name": "Ya Qadiru",
+        "targetCount" : "41",
+        "benifit" : "Removal of Difficulty"
+      },
+      {
+        "name": "Ya Nafiyu",
+        "targetCount" : "20",
+        "benifit" : "Success in every work"
+      }
+    ]
+  }
