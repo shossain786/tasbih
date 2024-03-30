@@ -3,6 +3,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tasbih/count_page.dart';
@@ -19,6 +20,7 @@ class CounterHome extends StatefulWidget {
 
 class _CounterHomeState extends State<CounterHome> {
   List<Map<String, dynamic>?> items = [];
+  bool _isExpanded = false;
 
   @override
   void initState() {
@@ -30,16 +32,53 @@ class _CounterHomeState extends State<CounterHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: myCustomAppBar(context, 'Tasbih', 'Items'),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          _addItems();
-        },
-        backgroundColor: Colors.orange,
-        splashColor: myBlueColor,
-        child: const Icon(
-          Icons.add,
-          color: Colors.red,
-        ),
+      floatingActionButton: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: <Widget>[
+          _isExpanded
+              ? SizedBox(
+                  height: 120,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        FloatingActionButton.extended(
+                          label: const Text('From Favorites'),
+                          onPressed: () {
+                            _showFavoritesDialog();
+                          },
+                          icon: const Icon(FlutterIslamicIcons.solidTasbih3),
+                        ),
+                        const SizedBox(height: 5),
+                        FloatingActionButton.extended(
+                          label: const Text('New Tasbih'),
+                          onPressed: () {
+                            _addItems();
+                          },
+                          icon: const Icon(FlutterIslamicIcons.tasbih3),
+                        ),
+                      ],
+                    ),
+                  ),
+                )
+              : const SizedBox.shrink(),
+          const SizedBox(height: 2),
+          FloatingActionButton(
+            onPressed: () {
+              // _addItems();
+              setState(() {
+                _isExpanded = !_isExpanded;
+              });
+            },
+            backgroundColor: Colors.orange,
+            splashColor: myBlueColor,
+            child: Icon(
+              _isExpanded ? Icons.remove : Icons.add,
+              color: Colors.red,
+            ),
+          ),
+        ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
@@ -149,6 +188,97 @@ class _CounterHomeState extends State<CounterHome> {
       ),
     ).then(
       (value) => _loadItems(),
+    );
+  }
+
+  void _addItemFromFavorites(Map<String, dynamic> item) async {
+    setState(() {
+      items.add({
+        'text': item['name'],
+        '${item['name']}_targetCount': int.parse(item['targetCount']),
+      });
+    });
+    await _saveItems();
+  }
+
+  void _showFavoritesDialog() async {
+    final jsonContent =
+        await rootBundle.loadString('assets/json_files/tasbih_items.json');
+    final dynamic jsonData = json.decode(jsonContent);
+
+    if (jsonData.containsKey('items') && jsonData['items'] is List) {
+      final List<dynamic> itemList = jsonData['items'];
+      final List<Map<String, dynamic>> favorites =
+          itemList.cast<Map<String, dynamic>>();
+      _displayFavoritesDialog(favorites);
+    } else {
+      debugPrint('JSON data is not in the expected format');
+    }
+  }
+
+  void _displayFavoritesDialog(List<Map<String, dynamic>> favorites) {
+    Color bgColor = Colors.white;
+    Color textColor = Colors.blue;
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          elevation: 30,
+          shadowColor: Colors.red,
+          surfaceTintColor: bgColor,
+          backgroundColor: bgColor,
+          title: Text(
+            'Favorites',
+            style: TextStyle(color: textColor, fontWeight: FontWeight.bold),
+          ),
+          content: SizedBox(
+            width: double.maxFinite,
+            child: ListView.builder(
+              itemCount: favorites.length,
+              itemBuilder: (context, index) {
+                final item = favorites[index];
+                return Card(
+                  child: ListTile(
+                    textColor: textColor,
+                    tileColor: bgColor,
+                    leading: CircleAvatar(
+                      foregroundColor: textColor,
+                      backgroundColor: bgColor,
+                      child: Text(
+                        '${item['targetCount']}',
+                      ),
+                    ),
+                    title: Text(item['name'],
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 24,
+                        )),
+                    subtitle: Text(
+                      '${item['benefit']}',
+                      style: const TextStyle(fontSize: 12),
+                    ),
+                    onTap: () {
+                      _addFromFavorite(item);
+                    },
+                  ),
+                );
+              },
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                _isExpanded = !_isExpanded;
+                Navigator.pop(context);
+              },
+              child: const Text(
+                'Close',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 
@@ -282,6 +412,37 @@ class _CounterHomeState extends State<CounterHome> {
                 Navigator.pop(context);
               },
               child: const Text('Remove'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _addFromFavorite(Map<String, dynamic> item) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Add Confirmation'),
+          content: const Text('Are you sure you want to add this item?'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+                Navigator.pop(context);
+                _addItemFromFavorites(item);
+                _isExpanded = !_isExpanded;
+              },
+              child: const Text('Yes'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+                _isExpanded = !_isExpanded;
+              },
+              child: const Text('No'),
             ),
           ],
         );

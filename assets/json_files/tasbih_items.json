@@ -1,54 +1,49 @@
 {
-    "tasbih" : [
+    "items" : [
       {
-        "name": "Subhaan Allah",
-        "targetCount" : "33",
-        "benifit" : "it has lots of benifits"
+        "name": "يَا اَوَّلُ",
+        "targetCount" : "41",
+        "benefit" : "40 din daily 41 bar wird kare اِنْ شَــآءَالـلّٰـه aulad hogi."
       },
       {
-        "name": "ya qabiyyu",
-        "targetCount" : "11",
-        "benifit" : "har farz namaaz ke baad 11 bar. Dimag ki majbuti ke lie"
-      },
-      {
-        "name": "Ya muhyi ya mumito",
+        "name": "هُوَ اللّٰهُ الرَّحِيْمُ",
         "targetCount" : "7",
-        "benifit" : "protection from black magic"
+        "benefit" : "Har farz namaaz ke baad 7 bar padhe. اِنْ شَــآءَالـلّٰـه imaan ki hifazat hogi."
       },
       {
-        "name": "huallahur rahim",
-        "targetCount" : "7",
-        "benifit" : "imaan ki majbuti ke lie"
+        "name": "يَا بَارِئُ",
+        "targetCount" : "10",
+        "benefit" : "Wazifa for Baby boy. Har juma ke din 10 baar padhna hai"
       },
       {
-        "name": "ya wahidu",
+        "name": "يَا قَهَّارُ",
         "targetCount" : "100",
-        "benifit" : "dar se bachne ke lie"
+        "benefit" : "Paresaani dur karne ke lie."
       },
       {
         "name": "ya Bariu",
         "targetCount" : "10",
-        "benifit" : "for baby boy"
+        "benefit" : "for baby boy"
       },
       {
         "name": "Ya Qahharu",
         "targetCount" : "100",
-        "benifit" : "Removal of troubles"
+        "benefit" : "Removal of troubles"
       },
       {
         "name": "Ya maliku",
         "targetCount" : "90",
-        "benifit" : "Getting Rid of Proverty"
+        "benefit" : "Getting Rid of Proverty"
       },
       {
         "name": "Ya Qadiru",
         "targetCount" : "41",
-        "benifit" : "Removal of Difficulty"
+        "benefit" : "Removal of Difficulty"
       },
       {
         "name": "Ya Nafiyu",
         "targetCount" : "20",
-        "benifit" : "Success in every work"
+        "benefit" : "Success in every work"
       }
     ]
   }
