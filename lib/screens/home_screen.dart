@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 4),
               Card(
                 shadowColor: Colors.blue,
-                elevation: 3.0,
+                elevation: 10.0,
                 shape: const RoundedRectangleBorder(
                   side: BorderSide(color: Colors.blue),
                   borderRadius:
@@ -276,6 +276,9 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
+              const Card(
+                child: Text('Hello'),
+              )
             ],
           ),
         ),

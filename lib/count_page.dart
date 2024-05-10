@@ -81,20 +81,53 @@ class _CountPageState extends State<CountPage> {
           ),
         ],
       ),
-      body: InkWell(
-        onTap: () {
-          _incrementCount();
-          if (count == targetCount) {
-            if (_canVibrate) {
-              Vibration.vibrate(duration: 1400, amplitude: 256);
+      body: SingleChildScrollView(
+        child: InkWell(
+          onTap: () {
+            _incrementCount();
+            if (count == targetCount) {
+              if (_canVibrate) {
+                Vibration.vibrate(duration: 1400, amplitude: 256);
+              }
+              _showContinuePrompt();
             }
-            _showContinuePrompt();
-          }
-        },
-        child: Center(
+          },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              const SizedBox(height: 100),
+              Container(
+                padding: const EdgeInsets.all(10),
+                decoration: ShapeDecoration.fromBoxDecoration(
+                  BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(width: 1, color: Colors.orange),
+                    color: Colors.blue.shade100,
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black,
+                        offset: Offset(8, 8),
+                        blurStyle: BlurStyle.outer,
+                      ),
+                    ],
+                  ),
+                ),
+                child: Text(
+                  widget.itemName,
+                  selectionColor: Colors.amber,
+                  style: const TextStyle(
+                    fontSize: 36,
+                    color: Colors.red,
+                    decorationColor: Colors.orange,
+                    wordSpacing: 2,
+                    letterSpacing: BorderSide.strokeAlignOutside,
+                    fontWeight: FontWeight.w600,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 60),
               Stack(
                 alignment: Alignment.center,
                 children: [
@@ -120,13 +153,12 @@ class _CountPageState extends State<CountPage> {
                           ),
                         ],
                       ),
-                      // Text('$totalCount'),
                     ],
                   ),
                 ],
               ),
               const SizedBox(
-                height: 100,
+                height: 60,
               ),
               const Icon(
                 FlutterIslamicIcons.tasbihHand,

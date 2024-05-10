@@ -136,48 +136,49 @@ class _DuaScreenState extends State<DuaScreen> {
             return ListView.builder(
               itemCount: groupedDuas[category]!.length,
               itemBuilder: (context, index) {
-                return Card(
-                  margin: const EdgeInsets.all(2),
-                  elevation: 4.0,
-                  color: (index % 2 == 1)
-                      ? MyColors().cardIconColor()
-                      : MyColors().btnTextColor(),
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Icon(
-                        FlutterIslamicIcons.quran2,
-                        color: MyColors().appBarIconsColor(),
-                      ),
-                    ),
-                    title: Text(
-                      groupedDuas[category]![index].name.length > 33
-                          ? '${groupedDuas[category]![index].name.substring(0, 30)}...'
-                          : groupedDuas[category]![index].name,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                        fontSize: 20,
-                      ),
-                    ),
-                    subtitle: Text(
-                      groupedDuas[category]![index].subtitle.length > 60
-                          ? '${groupedDuas[category]![index].subtitle.substring(0, 57)}...'
-                          : groupedDuas[category]![index].subtitle,
-                    ),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => DuaDetailsScreen(
-                            dua: groupedDuas[category]![index],
-                          ),
+                return Padding(
+                  padding: const EdgeInsets.only(left: 6, right: 6, top: 2),
+                  child: Card(
+                    margin: const EdgeInsets.all(2),
+                    elevation: 4.0,
+                    color: (index % 2 == 1)
+                        ? MyColors().cardIconColor()
+                        : MyColors().btnTextColor(),
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        backgroundColor: Colors.white,
+                        child: Icon(
+                          FlutterIslamicIcons.quran2,
+                          color: MyColors().appBarIconsColor(),
                         ),
-                      );
-                    },
-                    trailing: const Icon(
-                      Icons.arrow_right,
-                      color: Colors.white,
+                      ),
+                      title: Text(
+                        groupedDuas[category]![index].name,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontSize: 20,
+                        ),
+                      ),
+                      subtitle: Text(
+                        groupedDuas[category]![index].subtitle,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DuaDetailsScreen(
+                              dua: groupedDuas[category]![index],
+                            ),
+                          ),
+                        );
+                      },
+                      trailing: const Icon(
+                        Icons.arrow_right,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 );
