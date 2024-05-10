@@ -9,6 +9,7 @@ import 'package:tasbih/screens/durud_sharif.dart';
 import 'package:tasbih/screens/namaz/namaz_screen.dart';
 import 'package:tasbih/screens/shab_e_berat.dart';
 import 'package:tasbih/utils/library_utils.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -276,9 +277,292 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              // const Card(
-              //   child: Text('Hello'),
-              // )
+              Card(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    SizedBox(
+                      height: 350,
+                      child: CarouselSlider(
+                        items: [
+                          Container(
+                            height: 250,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.amber,
+                              boxShadow: [
+                                BoxShadow(
+                                  offset: const Offset(10, 10),
+                                  color: Colors.grey.withOpacity(0.6),
+                                ),
+                              ],
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'PAHLA KALMA TAIYYABAH | كَلِمَةُ اَلطَّيِّبَة',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    'لَآ اِلٰهَ اِلَّا اللّٰهُ مُحَمَّدٌ رَّسُوْلُ اللّٰهِ',
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  Divider(
+                                    color: Colors.black,
+                                  ),
+                                  Text(
+                                    'اللہ کے سوا کوئی معبود نہیں اور حضرت محمد(ﷺ) اللہ کے رسول ہیں\n\n Allah(عزوجل) ke siwa koi ma\'bud nahi aur hazrat Muhammad(ﷺ) Allah(عزوجل) ke rasul hai.',
+                                    style: TextStyle(fontSize: 20),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 250,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.blue,
+                              boxShadow: [
+                                BoxShadow(
+                                  offset: const Offset(10, 10),
+                                  color: Colors.grey.withOpacity(0.6),
+                                ),
+                              ],
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'DOOSRA KALMA SHAHADAT | كَلِمَاتْ اَلشَّهَادَة',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.yellow.withOpacity(0.9),
+                                    ),
+                                  ),
+                                  const Text(
+                                    'أَشْهَدُ أَنْ لَّآ إِلٰهَ إِلَّا اللّٰهُ وَحْدَهُ لَا شَرِيكَ لَهٗ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهٗ وَرَسُولُهٗ',
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  const Divider(
+                                    color: Colors.black,
+                                  ),
+                                  const Text(
+                                    'Mai Gawahi deta hun ke Allah(عزوجل) siwa koi ebadat ke laiq nahi. Woh eik(single) hai aur uska koi sharik nahi. Aur mai gawahi deta hun ke Muhammad(ﷺ) Allah(عزوجل) ke bande hai aur rasul hai.',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 250,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.teal.shade800,
+                              boxShadow: [
+                                BoxShadow(
+                                  offset: const Offset(10, 10),
+                                  color: Colors.grey.withOpacity(0.6),
+                                ),
+                              ],
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'TISRA KALMA TAMJID | كَلِمَاتْ اَلتَّمْجِيدْ',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.yellow,
+                                    ),
+                                  ),
+                                  Text(
+                                    'سُبْحَانَ اللّٰهِ وَالْحَمْدُلِلّٰهِ وَلَآ إِلٰهَ إِلَّا اللّٰهُ وَاللّٰهُ أكْبَرُ وَلَا حَوْلَ وَلاَ قُوَّةَ إِلَّا بِاللّٰهِ الْعَلِيِّ الْعَظِيْمِ',
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  Divider(
+                                    color: Colors.black,
+                                  ),
+                                  Text(
+                                    'Allah(عزوجل) har aib se paak hai. Allah(عزوجل) hi ke lie saari khubia hai. Allah(عزوجل) ke siwa koi ebadat ke laiq nahi. Aur Allah(عزوجل) sab se bada hai aur Allah(عزوجل) buzurg wo bartarhi taqat wo quwwat dene wala hai.',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 280,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.orange,
+                              boxShadow: [
+                                BoxShadow(
+                                  offset: const Offset(10, 10),
+                                  color: Colors.grey.withOpacity(0.6),
+                                ),
+                              ],
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'CHAUTHA KALMA TAUHEED | كَلِمَاتْ اَلتَّوْحِيدْ',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.deepPurple.withOpacity(0.9),
+                                    ),
+                                  ),
+                                  const Text(
+                                    'لَآ اِلٰهَ اِلَّا اللّٰهُ وَحْدَهٗ لَا شَرِيْكَ لَهٗ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْىٖ وَيُمِيْتُ ؕ وَهُوَ حَئٌّ لَّا يَمُوْتُ اَبَدًا اَبَدًا ؕ ذُوالْجَلَالِ وَالْاِكْرَامِ ؕ بِيَدِهِ الْخَيْرُ ؕ وَهُوَ عَلٰى كُلِّ شَىْءٍ قَدِیْرٌ',
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  const Divider(
+                                    color: Colors.black,
+                                  ),
+                                  const Text(
+                                      'Allah(عزوجل) ke siwa koi ebadat ke laiq nahi, woh akela hai, uska koi sharik nahi, usiki badshahat hai, usi ke lie sari khubian hai, wohi zindagi aur maut deta hai. Woh zindah hai kabhibhi nahi marega. Wo azmat aur buzurgi wala hai. Usi ke haath me har tarah ki bhalai hai, aur woh har cheez par qadir hai.'),
+                                ],
+                              ),
+                            ),
+                          ),
+                          // Container(
+                          //   height: 250,
+                          //   width: double.infinity,
+                          //   decoration: BoxDecoration(
+                          //     borderRadius: BorderRadius.circular(10),
+                          //     color: Colors.green,
+                          //     boxShadow: [
+                          //       BoxShadow(
+                          //         offset: const Offset(10, 10),
+                          //         color: Colors.grey.withOpacity(0.6),
+                          //       ),
+                          //     ],
+                          //   ),
+                          //   child: Padding(
+                          //     padding: const EdgeInsets.all(8.0),
+                          //     child: Column(
+                          //       children: [
+                          //         Text(
+                          //           'Doosra Kalma Shahadat | كَلِمَاتْ اَلشَّهَادَة',
+                          //           style: TextStyle(
+                          //             fontWeight: FontWeight.bold,
+                          //             color: Colors.yellow.withOpacity(0.9),
+                          //           ),
+                          //         ),
+                          //         const Text(
+                          //           'أَشْهَدُ أَنْ لَّآ إِلٰهَ إِلَّا اللّٰهُ وَحْدَهُ لَا شَرِيكَ لَهٗ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهٗ وَرَسُولُهٗ',
+                          //           style: TextStyle(
+                          //             fontSize: 30,
+                          //             fontWeight: FontWeight.w500,
+                          //             color: Colors.white,
+                          //           ),
+                          //           textAlign: TextAlign.center,
+                          //         ),
+                          //         const Divider(
+                          //           color: Colors.black,
+                          //         ),
+                          //         const Text(
+                          //             'میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں اور میں گواہی دیتا ہوں کہ محمد (ﷺ) اللہ کے بندے اور رسول ہیں۔'),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          // Container(
+                          //   height: 250,
+                          //   width: double.infinity,
+                          //   decoration: BoxDecoration(
+                          //     borderRadius: BorderRadius.circular(10),
+                          //     color: Colors.purple,
+                          //     boxShadow: [
+                          //       BoxShadow(
+                          //         offset: const Offset(10, 10),
+                          //         color: Colors.grey.withOpacity(0.6),
+                          //       ),
+                          //     ],
+                          //   ),
+                          //   child: Padding(
+                          //     padding: const EdgeInsets.all(8.0),
+                          //     child: Column(
+                          //       children: [
+                          //         Text(
+                          //           'Doosra Kalma Shahadat | كَلِمَاتْ اَلشَّهَادَة',
+                          //           style: TextStyle(
+                          //             fontWeight: FontWeight.bold,
+                          //             color: Colors.yellow.withOpacity(0.9),
+                          //           ),
+                          //         ),
+                          //         const Text(
+                          //           'أَشْهَدُ أَنْ لَّآ إِلٰهَ إِلَّا اللّٰهُ وَحْدَهُ لَا شَرِيكَ لَهٗ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهٗ وَرَسُولُهٗ',
+                          //           style: TextStyle(
+                          //             fontSize: 30,
+                          //             fontWeight: FontWeight.w500,
+                          //             color: Colors.white,
+                          //           ),
+                          //           textAlign: TextAlign.center,
+                          //         ),
+                          //         const Divider(
+                          //           color: Colors.black,
+                          //         ),
+                          //         const Text(
+                          //             'میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں اور میں گواہی دیتا ہوں کہ محمد (ﷺ) اللہ کے بندے اور رسول ہیں۔'),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                        ],
+                        options: CarouselOptions(
+                          height: 300.0,
+                          disableCenter: true,
+                          enlargeCenterPage: true,
+                          autoPlay: false,
+                          aspectRatio: 16 / 9,
+                          autoPlayCurve: Curves.fastOutSlowIn,
+                          enableInfiniteScroll: true,
+                          autoPlayAnimationDuration:
+                              const Duration(milliseconds: 800),
+                          viewportFraction: 0.8,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
