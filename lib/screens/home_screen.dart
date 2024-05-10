@@ -276,9 +276,9 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              const Card(
-                child: Text('Hello'),
-              )
+              // const Card(
+              //   child: Text('Hello'),
+              // )
             ],
           ),
         ),
