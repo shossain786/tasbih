@@ -96,35 +96,24 @@ class _CountPageState extends State<CountPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 100),
-              Container(
-                padding: const EdgeInsets.all(10),
-                decoration: ShapeDecoration.fromBoxDecoration(
-                  BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(width: 1, color: Colors.orange),
-                    color: Colors.blue.shade100,
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black,
-                        offset: Offset(8, 8),
-                        blurStyle: BlurStyle.outer,
-                      ),
-                    ],
-                  ),
-                ),
-                child: Text(
-                  widget.itemName,
-                  selectionColor: Colors.amber,
-                  style: const TextStyle(
-                    fontSize: 36,
-                    color: Colors.red,
-                    decorationColor: Colors.orange,
-                    wordSpacing: 2,
-                    letterSpacing: BorderSide.strokeAlignOutside,
-                    fontWeight: FontWeight.w600,
-                    overflow: TextOverflow.ellipsis,
-                  ),
+              const SizedBox(height: 120),
+              Text(
+                widget.itemName,
+                selectionColor: Colors.amber,
+                style: const TextStyle(
+                  fontSize: 36,
+                  color: Colors.red,
+                  wordSpacing: 2,
+                  letterSpacing: BorderSide.strokeAlignOutside,
+                  fontWeight: FontWeight.w600,
+                  overflow: TextOverflow.ellipsis,
+                  shadows: [
+                    Shadow(
+                      color: Colors.blue,
+                      blurRadius: 10.0,
+                      offset: Offset(5.0, 5.0),
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(height: 60),
@@ -157,14 +146,20 @@ class _CountPageState extends State<CountPage> {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 60,
-              ),
+              const SizedBox(height: 60),
               const Icon(
                 FlutterIslamicIcons.tasbihHand,
                 size: 140,
                 color: Colors.blue,
+                shadows: [
+                  Shadow(
+                    color: Colors.blue,
+                    blurRadius: 10.0,
+                    offset: Offset(5.0, 5.0),
+                  ),
+                ],
               ),
+              const SizedBox(height: 100),
             ],
           ),
         ),
@@ -192,23 +187,26 @@ class _CountPageState extends State<CountPage> {
       width: 200,
       height: 200,
       child: Stack(
-        children: List.generate(totalDots, (index) {
-          double angle = 2 * pi * index / totalDots;
-          double radius = 95;
-          double dotRadius = 4;
-          return Positioned(
-            top: radius * cos(angle) + radius,
-            left: radius * sin(angle) + radius,
-            child: Container(
-              width: dotRadius,
-              height: dotRadius,
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: index < remainingDots ? Colors.orange : Colors.blue,
+        children: List.generate(
+          totalDots,
+          (index) {
+            double angle = 2 * pi * index / totalDots;
+            double radius = 95;
+            double dotRadius = 4;
+            return Positioned(
+              top: radius * cos(angle) + radius,
+              left: radius * sin(angle) + radius,
+              child: Container(
+                width: dotRadius,
+                height: dotRadius,
+                decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  color: index < remainingDots ? Colors.orange : Colors.blue,
+                ),
               ),
-            ),
-          );
-        }),
+            );
+          },
+        ),
       ),
     );
   }
