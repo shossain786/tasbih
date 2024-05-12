@@ -66,7 +66,7 @@ class PahlaKamla extends StatelessWidget {
                     children: [
                       TextSpan(
                         text:
-                            'Hazrat Abdullah bin mar(رضی اللہ تعالی عنہ) bayan karte hai ki Aaqa madani صلی اللہ تعالی علیہ وسلم ke farman hai ki - ',
+                            'Hazrat Abdullah bin Umar(رضی اللہ تعالی عنہ) bayan karte hai ki Aaqa madani صلی اللہ تعالی علیہ وسلم ke farman hai ki - ',
                         style: TextStyle(
                           color: Color.fromARGB(255, 1, 30, 53),
                           fontWeight: FontWeight.w500,
@@ -75,7 +75,7 @@ class PahlaKamla extends StatelessWidget {
                       ),
                       TextSpan(
                         text:
-                            'Saaton aasman aur saaton zamin me jo kuch bhi hai ye sab ek palde me rakhi jaye aur dusre palde me Kalma Tayyiba ho to yakinan kalme wala palda bhari hai.',
+                            'Saaton aasman aur saaton zamin me jo kuch bhi hai ye sab ek palde(palle) me rakhi jaye aur dusre palde me Kalma Tayyiba ho to yakinan kalme wala palda bhari hai.',
                         style: TextStyle(
                           color: Colors.blue,
                           fontStyle: FontStyle.italic,
@@ -155,7 +155,7 @@ class PahlaKamla extends StatelessWidget {
                       ),
                       TextSpan(
                         text:
-                            'Jo shaksh kalma taiyyaba ko har raj 100 martaba padne ka aadi ho jae to qiyamat ke din chaudahwi(14th) raat ke chand ke manind chamakta rahega.',
+                            'Jo shaksh kalma taiyyaba ko har roj 100 martaba padne ka aadi ho jae to qiyamat ke din chaudahwi(14th) raat ke chand ke manind chamakta rahega.',
                         style: TextStyle(
                           color: Colors.blue,
                           fontStyle: FontStyle.italic,
@@ -387,7 +387,7 @@ class PahlaKamla extends StatelessWidget {
                       ),
                       TextSpan(
                         text:
-                            'Aap(ﷺ) musalsal yahi jawab dete rahe. \n\n Mujhse raha nahi gaya aur fir chauthi bar bade chambhe mei maine arz kia - "Ya Rasul Allah(ﷺ)! agar usne zina kia ho, agarche usne chori ki ho tab bhi woh jannat me jayega?" \n\n Aaqa madani(ﷺ) ne jawab dia - ',
+                            'Aap(ﷺ) musalsal yahi jawab dete rahe. \n\n Mujhse raha nahi gaya aur fir chauthi bar bade achambhe mei maine arz kia - "Ya Rasul Allah(ﷺ)! agar usne zina kia ho, agarche usne chori ki ho tab bhi woh jannat me jayega?" \n\n Aaqa madani(ﷺ) ne jawab dia - ',
                         style: TextStyle(
                           color: Color.fromARGB(255, 1, 30, 53),
                           fontWeight: FontWeight.w500,
